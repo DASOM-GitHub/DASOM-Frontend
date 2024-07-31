@@ -1,0 +1,187 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+.main{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 1page */
+.main-1page{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 12%;
+    background-color: #444CFF;
+    padding: 10% 0 10% 0;
+    margin-bottom: 16em;
+}
+.main-title-box{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(20px, 3.5vw, 56px);
+    font-weight: bold;
+    color: white;
+    margin-top: 1em;
+}
+.main-1pageImg{
+    width: 20vmax;
+    height: 20vmax;
+    border-radius: 50%;
+    background-color: antiquewhite;
+}
+.main-title p {
+    margin: 0;
+    margin-bottom: 0.3em;
+    padding: 0;
+}
+.main-subtitle {
+    margin-top: 1em;
+}
+.main-applybtn{
+    margin-left: 0.7em;
+    width: 0.7em;
+    height: auto;
+}
+
+/* 2page */
+.main-2page{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 16em;
+}
+.main-2-contents {
+    align-items: center;
+    margin: 0 10% 0 10%;
+    width: 80%;
+    display: flex;
+}
+.main-2-title{
+    margin-left: 10%;
+    text-align: left;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.main-2-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    flex: 1;
+    margin-right: 2%;
+}
+.main-1box-title {
+    font-size: clamp(12px, 2vw, 48px);
+    font-weight: bold;
+}
+.main-2-1box {
+    background-color: #F5F5F5;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-size: clamp(8px, 1.2vw, 36px);
+    padding: 1em 3em 0.5em 2em;
+    border-radius: 1.5em;
+}
+.main-2-2box {
+    margin-left: 20%;
+    background-color: #F5F5F5;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-size: clamp(8px, 1.2vw, 36px);
+    padding: 1em 3em 0.5em 2em;
+    border-radius: 1.5em;
+}
+.main-2-3box {
+    background-color: #F5F5F5;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-size: clamp(8px, 1.2vw, 36px);
+    padding: 1em 3em 0.5em 2em;
+    border-radius: 1.5em;
+}
+.main-2pageImg {
+    width: 20vmax;
+    height: 20vmax;
+    background-color: antiquewhite;
+    border-radius: 50%;
+}
+
+/* 3page */
+.main-3page{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 16em;
+}
+.main-3-title{
+    text-align: center;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+    margin-bottom: 3.5em;
+}
+.main-3-boxes{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: clamp(12px, 2vw, 48px);
+    gap: 2em;
+}
+.main-3-1box {
+    padding: 0.5em 0;
+    width: 18vw;
+    border-radius: 1.5em;
+    background-color: #F5F5F5;
+}
+
+/* 4page */
+.main-4page{
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 16em;
+}
+.main-4-title{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+}
+.main-4-title img {
+    margin-left: 0.2em;
+    width: 1.2em;
+    height: auto;
+}
+.main-4-subtitle{
+    text-align: left;
+    font-size: clamp(10px, 2vw, 48px);
+    margin-bottom: 1.7em;
+}
+.main-4-boxes1, .main-4-boxes2{
+    display: flex;
+    gap: 1.5em;
+    font-size: clamp(10px, 2vw, 48px);
+    color: white;
+}
+.main-4-boxes1{
+    margin-bottom: 1.5em;
+}
+.main-4-1box {
+    border-radius: 1em;
+    background-color: #444CFF;
+    padding: 1em 2em;
+}
+.main-4-2box {
+    border-radius: 1em;
+    background-color: #8280FF;
+    padding: 1em 2em;
+}
