@@ -1,11 +1,25 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./Main.css";
 import styled from "styled-components"
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
 
 const Main = () => {
-  
+
+  const sliderRef = useRef(null);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    centerMode: true,
+  };
+
   return (
     <Container>
       <div>
@@ -101,7 +115,36 @@ const Main = () => {
           </div>
 
           <div className='main-5page'>
-            
+            <div className='main-5-title'>
+              <p>ABOUT</p>
+              <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt=">"/>
+            </div>
+            <div className='main-5-slider'>
+              <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-left.png`} alt='prev'
+              onClick={() => sliderRef.current.slickPrev()} className="main-5-prev-button"/>
+              <Slider ref={sliderRef} {...settings}>
+                <div className='main-5-slider-box'>
+                  <div className='main-5-slider-img'>
+                    <img src={`${process.env.PUBLIC_URL}/main_img/2024MT.png`} alt='MT사진'/>
+                    <p>MT</p>
+                  </div>
+                </div>
+                <div className='main-5-slider-box'>
+                  <div className='main-5-slider-img'>
+                    <img src={`${process.env.PUBLIC_URL}/main_img/2024HAKATON.png`} alt='HAKATON사진'/>
+                    <p>HAKATON</p>
+                  </div>
+                </div>
+                <div className='main-5-slider-box'>
+                  <p>Slide 3</p>
+                </div>
+                <div className='main-5-slider-box'>
+                  <p>Slide 4</p>
+                </div>
+              </Slider>
+              <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt='next'
+              onClick={() => sliderRef.current.slickNext()} className="main-5-next-button"/>
+            </div>
           </div>
 
           <div className='main-6page'>

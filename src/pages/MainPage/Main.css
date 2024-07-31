@@ -1,5 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 
+
+
 .main{
     font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
     padding: 0;
@@ -17,7 +19,7 @@
     gap: 12%;
     background-color: #444CFF;
     padding: 10% 0 10% 0;
-    margin-bottom: 16em;
+    margin-bottom: 400px;
 }
 .main-title-box{
     text-align: left;
@@ -53,7 +55,7 @@
     width: 100%;
     height: auto;
     justify-content: center;
-    margin-bottom: 16em;
+    margin-bottom: 400px;
 }
 .main-2-contents {
     align-items: center;
@@ -119,7 +121,7 @@
     width: 100%;
     height: auto;
     justify-content: center;
-    margin-bottom: 16em;
+    margin-bottom: 400px;
 }
 .main-3-title{
     text-align: center;
@@ -147,7 +149,7 @@
     width: 70%;
     height: auto;
     justify-content: center;
-    margin-bottom: 16em;
+    margin-bottom: 400px;
 }
 .main-4-title{
     display: flex;
@@ -185,3 +187,95 @@
     background-color: #8280FF;
     padding: 1em 2em;
 }
+
+/* 5page */
+.main-5page{
+    justify-content: center;
+    margin-bottom: 400px;
+}
+.main-5-title{
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+}
+.main-5-title img {
+    margin-left: 0.2em;
+    width: 1.2em;
+    height: auto;
+}
+.main-5-slider {
+    font-size: clamp(12px, 2vw, 48px);
+    font-weight: bold;
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+.main-5-slider-box {
+    position: relative;
+    border-radius: 1.5em;
+}
+.main-5-slider-box img {
+    width: 12em;
+    height: auto;
+    padding: 0;
+}
+.main-5-slider-img {
+    background-color: #F5F5F5;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 0.5em;
+    width: fit-content;
+}
+.main-5-slider-img p{
+    margin: 0.5em 0 0 0;
+}
+.main-5-prev-button, .main-5-next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    background-color: white;
+    width: 2em;
+    height: auto;
+}
+.main-5-prev-button {
+    left: -2em;  /* 슬라이더 컨테이너의 왼쪽 바깥에 배치 */
+}
+  
+.main-5-next-button {
+    right: -2em;  /* 슬라이더 컨테이너의 오른쪽 바깥에 배치 */
+}
+
+/* 도트 스타일링 */
+.slick-dots {
+    bottom: -30px; /* 도트의 위치를 조정 */
+  }
+  
+  .slick-dots li {
+    margin: 0 5px; /* 도트 사이의 간격을 설정 */
+  }
+  
+  .slick-dots li button {
+    font-size: 0; /* 숫자 제거를 위해 폰트 크기 0으로 설정 */
+    border: none; /* 버튼의 기본 테두리 제거 */
+    background: transparent; /* 버튼 배경 투명하게 설정 */
+  }
+  
+  .slick-dots li button:before {
+    content: ''; /* 숫자 대신 빈 콘텐츠 설정 */
+    width: 10px; /* 도트의 크기 */
+    height: 10px; /* 도트의 높이 */
+    border-radius: 50%; /* 도트를 원형으로 만들기 */
+    background-color: #ccc; /* 기본 도트 색상 */
+    display: inline-block; /* 인라인 블록으로 도트 배치 */
+  }
+  
+  .slick-dots li.slick-active button:before {
+    background-color: #000; /* 활성 도트의 색상 */
+  }
