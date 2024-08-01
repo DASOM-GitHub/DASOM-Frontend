@@ -19,7 +19,7 @@
     gap: 12%;
     background-color: #444CFF;
     padding: 10% 0 10% 0;
-    margin-bottom: 400px;
+    margin-bottom: 60vw;
 }
 .main-title-box{
     text-align: left;
@@ -31,10 +31,10 @@
     margin-top: 1em;
 }
 .main-1pageImg{
-    width: 20vmax;
-    height: 20vmax;
+    width: 30vw;
+    height: 30vw;
     border-radius: 50%;
-    background-color: antiquewhite;
+    background-color: #F5F5F5;
 }
 .main-title p {
     margin: 0;
@@ -55,7 +55,7 @@
     width: 100%;
     height: auto;
     justify-content: center;
-    margin-bottom: 400px;
+    margin-bottom: 60vw;
 }
 .main-2-contents {
     align-items: center;
@@ -110,9 +110,9 @@
     border-radius: 1.5em;
 }
 .main-2pageImg {
-    width: 20vmax;
-    height: 20vmax;
-    background-color: antiquewhite;
+    width: 30vw;
+    height: 30vw;
+    background-color: #F5F5F5;
     border-radius: 50%;
 }
 
@@ -121,7 +121,7 @@
     width: 100%;
     height: auto;
     justify-content: center;
-    margin-bottom: 400px;
+    margin-bottom: 60vw;
 }
 .main-3-title{
     text-align: center;
@@ -149,7 +149,7 @@
     width: 70%;
     height: auto;
     justify-content: center;
-    margin-bottom: 400px;
+    margin-bottom: 60vw;
 }
 .main-4-title{
     display: flex;
@@ -191,7 +191,7 @@
 /* 5page */
 .main-5page{
     justify-content: center;
-    margin-bottom: 400px;
+    margin-bottom: 60vw;
 }
 .main-5-title{
     margin-left: 15%;
@@ -201,6 +201,7 @@
     justify-content: left;
     font-size: clamp(20px, 4vw, 56px);
     font-weight: bold;
+    margin-bottom: 5vw;
 }
 .main-5-title img {
     margin-left: 0.2em;
@@ -259,11 +260,13 @@
     justify-content: center;
     padding: 0;
     list-style: none;
-    margin-bottom: -2.3em; /*도트 위치 */
+    position: absolute;  /* 위치 조정을 위해 절대 위치로 설정 */
+    bottom: -10vw;  /* 아래쪽 위치 조정 */
+    width: 100%;  /* 부모 컨테이너의 너비를 채움 */
   }
   
   .main-slick-dots li {
-    margin: 0 1em !important; /* 도트 사이의 간격을 설정 : css우선순위 */
+    margin: 0 0.5em !important; /* 도트 사이의 간격을 설정 : css우선순위 */
   }
 
   .main-slick-dots li button {
@@ -282,3 +285,41 @@
   .main-slick-dots li.slick-active .main-slick-dot {
     background-color: #444CFF; /* active 도트의 색상 */
   }
+
+  /* 6page */
+.main-6page{
+    margin-bottom: 60vw;
+    background: linear-gradient(45deg, #A1C4FD, #C2E9FB);
+    padding: 6em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-6-smalltitle {
+    margin: 0;
+    font-size: clamp(12px, 2vw, 48px);
+}
+.main-6-bigtitle {
+    margin: 0;
+    margin: 0.8em 0;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+}
+.main-6-applybox {
+    align-items: center;
+    display: flex;
+    font-size: clamp(12px, 2vw, 48px);
+    font-weight: bold;
+    color: white;
+    background-color: #444CFF;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20vw;
+    padding: 0.1em 3em;
+}
+.main-6-applybox img {
+    width: 1em;
+    height: 1em;
+    margin-left: 1em;
+}

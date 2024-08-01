@@ -4,10 +4,17 @@ import styled from "styled-components"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import CountUp from "react-countup";
+import { useInView } from 'react-intersection-observer';
 
 
 
 const Main = () => {
+
+  const [ref, inView] = useInView({
+    triggerOnce: true, // 요소가 한 번 트리거되면 다시 트리거되지 않음
+    threshold: 0.5 // 요소가 50% 보일 때 트리거
+  });
 
   const sliderRef = useRef(null);
 
@@ -82,22 +89,23 @@ const Main = () => {
 
           <div className='main-3page'>
             <div className='main-3-title'>컴퓨터소프트웨어공학과 전공동아리 DASOM</div>
-            <div className='main-3-boxes'>
+            <div className='main-3-boxes' ref={ref}>
               <div className='main-3-1box'>
                 <p>창립연도</p>
                 <p>1992년</p>
               </div>
               <div className='main-3-1box'>
                 <p>누적 회원 수</p>
-                <p>1000+명</p>
+                <p>{inView ? <CountUp end={1000} duration={3} /> : 0}+명</p>
               </div>
               <div className='main-3-1box'>
                 <p>운영기수</p>
-                <p>33기</p>
+                <p>{inView ? <CountUp end={33} duration={3} /> : 0}기
+                </p>
               </div>
               <div className='main-3-1box'>
                 <p>EXPO 수상</p>
-                <p>2+</p>                               {/* countup */}
+                <p>2+</p>
               </div>
             </div>
           </div>
@@ -163,7 +171,14 @@ const Main = () => {
           </div>
 
           <div className='main-6page'>
-            
+            <div className='main-6-title'>
+              <p className='main-6-smalltitle'>모두와 함께 새로운 경험을 만드는 이곳</p>
+              <p className='main-6-bigtitle'>DASOM에 지금 합류하세요</p>
+            </div>
+            <div className='main-6-applybox'>
+              <p>지원하기</p>
+              <img src={`${process.env.PUBLIC_URL}/main_img/arrow.png`} alt=">"/>
+            </div>
           </div>
         </div>
       </div>
