@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Outlet, Route, Routes } from "react-router-dom
 import { AppProvider } from "./contexts/AppContext";
 import Main from "./pages/MainPage/Main";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import About from './pages/AboutPage/About';
 import Recruit from './pages/RecruitPage/Recruit';
 import Apply from './pages/ApplyPage/Apply';
