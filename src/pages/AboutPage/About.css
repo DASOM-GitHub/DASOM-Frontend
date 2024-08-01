@@ -1,0 +1,253 @@
+/* #wrap{
+    @media screen { min-width: 786px;   
+    }
+    
+    @media screen { max-width: 1132px;
+    }
+} */
+
+.about-contentbox1{
+    margin-left: 21.7%;
+    margin-right: 49%;
+    margin-top: 15.77%;
+
+}
+
+.about-title1{
+    color: #444CFF;
+    font-weight: bold;
+    font-size: 1.67vw
+}
+
+.about-maintitle1{
+    font-size: 3.33vw;
+    font-weight: bold;
+    margin-top: 5.77%;
+
+}
+
+.about-subtitle1{
+    font-size: 1.25vw;
+    margin-top: 5.77%;
+}
+
+.about-contentbox2{
+    margin-left: 56.09375%;
+    margin-right: 12.6%;
+    margin-top: 12.77%;
+    width: 30%;
+}
+
+.about-title2{
+    color: #444CFF;
+    font-weight: bold;
+    font-size: 1.67vw;
+    
+}
+
+.about-maintitle2{
+    font-size: 3.33vw;
+    font-weight: bold;
+    margin-top: 5.77%;
+}
+
+.about-subtitle2{
+    font-size: 1.25vw;
+    margin-top: 5.77%;
+}
+
+.about-contentbox3{
+    margin-left: 21.7%;
+    margin-right: 49%;
+    margin-top: 12.77%;
+}
+
+.about-title3{
+    color: #444CFF;
+    font-weight: bold;
+    font-size: 1.67vw
+}
+
+.about-maintitle3{
+    font-size: 3.33vw;
+    font-weight: bold;
+    margin-top: 5.77%;
+}
+
+.about-subtitle3{
+    font-size: 1.25vw;
+    margin-top: 5.77%;
+}
+
+.member-title{
+    margin-left: 21.7%;
+    margin-right: 49%;
+    font-weight: bold;
+    margin-top: 30%;
+    font-size: 2.92vw;
+}
+
+.member-box{
+    margin-left: 21.7%;
+    display: flex;
+    font-weight: bold;
+    font-size: 1.25vw; 
+    display: flex;
+    margin-top: 3.65%;
+    
+}
+
+.member-lead{
+    width: 12.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
+    height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
+    border-radius: 25px;
+    border: none;
+   
+}
+
+.member-lead:hover {
+    background-color: #444CFF;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+
+.member-core, .member-back, .member-front{
+    margin-left: 3.22%;
+    width: 12.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
+    height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
+    border-radius: 25px;
+    border: none;
+}
+
+.member-core:hover {
+    background-color: #444CFF;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.member-front:hover {
+    background-color: #444CFF;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+.member-back:hover {
+    background-color: #444CFF;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-container1 {
+    margin-left: 21.7%;
+    margin-right: 49%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+  }
+
+
+  
+  .profile-image {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50px; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/yewon.JPG'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  }
+  
+  .member-info {
+    font-size: 1.25vw;    
+    font-weight: bold;
+    margin-bottom: 1vw; /* 텍스트와 다른 요소 사이의 간격 */
+  }
+
+  .profile-coment{
+    flex-direction: column;
+    margin-left: 3%;
+    margin-top: 3%;
+  }
+  
+  .member-coment {
+    font-size: 1.25vw;    
+    color: #000000; 
+  }
+ 
+  .activity {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 2vw; /* 패딩 설정 (뷰포트 너비의 비율) */
+    margin-top: 30%;
+
+  }
+  
+  .activity-title {
+    font-size: 2.92vw;
+    font-weight: bold;
+  }
+
+  .activity-project-box{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    width: 55vw; /* 너비를 뷰포트 너비의 비율로 설정 */
+    height: 30vh; /* 높이를 뷰포트 높이의 비율로 설정 */
+    flex-direction: row;
+    padding: 2%;
+    margin-top: 3.65%;
+
+  }
+
+  .activity-image{
+    width: 45vw; /* 너비를 뷰포트 너비의 비율로 설정 */
+    height: 30vh; /* 높이를 뷰포트 높이의 비율로 설정 */
+    border-radius: 10px;
+    background-image: url('../../iamges/activity/project.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+  }
+
+  .project {
+    font-size: 1vw; /* 폰트 크기 조정 */
+    font-weight: bold;
+    margin-bottom: 1vw; /* 제목과 아래 요소 사이 간격 */
+    margin-left: 3%;
+    background-color: #444CFF;
+    color: #ffffff;
+    width: 18%;
+    height: 2.4vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+    flex-direction: column; 
+
+  }
+  
+  .project-title {
+    font-size: 2vw; /* 폰트 크기 조정 */
+    margin-bottom: 2vw; /* 제목과 아래 요소 사이 간격 */
+    margin-left: 4%;
+    font-weight: bold;
+    
+  }
+  
+  .project-subtitle {
+    font-size: 1vw; /* 폰트 크기 조정 */
+    color:#000000; /* 색상 설정 */
+    margin-left: 4%;
+
+  }
