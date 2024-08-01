@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./Header.css";
+import logo from "../iamges/logo/header_logo.png";
 
 const Header = () => {
   
   return (
     <header className="header">
-        
       <div className="container">
       <nav className="header-nav">
         <ul>
