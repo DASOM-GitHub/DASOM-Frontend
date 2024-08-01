@@ -1,65 +1,92 @@
 .header {
+    width: 100%;
+    height: 9rem;
     padding: 10px 0;
     position: relative;
     font-family: 'Inter', sans-serif;
+    align-items: center;
 }
 
 .container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 100%;
     display: flex;
-    justify-content: baseline;
+    justify-content: space-between;
     align-items: center;
+    margin-left: 132px;
+    margin-top: 30px;
 }
 
-.logo {
-    font-size: 64;
-    color: #000AFF;
-    font-weight: bold;
-    width: 244;
-    height: 77;
+img {
+    cursor: pointer
 }
 
-.header-nav ul {
-    list-style: none;
-    padding: 20;
+.logo img {
+    display: flex;
+    height: 40px;
+    width: auto;
+
+}
+
+.icon {
+    display:flex;
+    list-style-type: none;
+    margin-top: 10px;
+    padding: 0;
+}
+
+.icon img {
+    height: 40px; 
+    width: auto;
+    margin-left: 26px;
+
+  }
+
+.menu {
+    list-style-type: none;
     margin: 0;
     display: flex;
 }
 
-.header-nav li {
-    margin: 0 15px;
+.menu li {
+    margin: 0 30px;
     color: #000AFF;
     cursor: pointer;
-    size: 24px;
-    font-weight: 700;
-    margin-left: 20px;
+    height: 25px;
+    width: auto;
+    font-weight: bold;
+    font-size: 24px;
 }
 
-.header-nav li :active, li :focus {
+.menu a {
+    text-decoration: none;
     color: #000AFF;
 }
 
-.header-nav a {
-    text-decoration: none;
-}
-
-.nav a:hover {
-    text-decoration: underline;
-}
-
-
-@media (max-width: 768px) {
-    .nav ul {
+/* 모바일 반응형 */
+@media screen and (max-width: 786px) {
+    .container {
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        right: 20px;
-        width: 200px;
+        align-items: flex-start;
+        padding: 8px 24px;
     }
 
-    .header-nav li {
-        margin-left: 20px;
+    .menu li {
+        width: 100%;
+        margin: 10px 0;
+    }
+        .menu {
+        display: none; /* 모바일 화면에서는 메뉴 숨기기 */
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon {
+        display: flex;
+        justify-content: center;
+        width: 100%
+    }
+
+    .icon img {
+        height: 1.5rem;
     }
 }
