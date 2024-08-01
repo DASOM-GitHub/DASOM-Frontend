@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import "./About.css";
-// import yewon from "../../iamges/member-profile/yewon.JPG";
-// import styled from 'styled-components';
+import styled from 'styled-components';
 
 
 const About = () => {
-// const ImageWrap = styled.div`
-//   margin: 0 auto
-//   `;
+  
 
   return (
-    <div className='about'>
+    <div id='about'>
       <div className='about-contentbox'>
       <div className='about-contentbox1'>
         <div className='about-title1'>RESEARCH</div>
@@ -31,24 +28,32 @@ const About = () => {
       <div className='member'>
         <div className='member-title'>MEMBER</div>
         <div className='member-box'>
-        <div className='member-lead'>LEAD</div>
-        <div className='member-core'>CORE</div>
-        <div className='member-front'>FRONT</div>
-        <div className='member-back'>BACK</div>
+        <button className='member-lead'>LEAD</button>
+        <button className='member-core'>CORE</button>
+        <button className='member-front'>FRONT</button>
+        <button className='member-back'>BACK</button>
         </div>
-        {/* <div className='member-profile-box'>
-          <ImageWrap className='member-profile'>
-            <img src={yewon} alt='' />
-          </ImageWrap>
-          <div className='member-info'>이예원 / 2학년</div>
-          <div className='member-ment'>저는 프론트앤드개발자를 희망하고 있습니다.</div>
-          <ImageWrap className='member-profile'>
-            <img src={yewon} alt='' />
-          </ImageWrap>
-          <div className='member-info'>이예원 / 2학년</div>
-          <div className='member-ment'>저는 프론트앤드개발자를 희망하고 있습니다.</div>
-        </div> */}
+        <div className='profile-container1'>
+        <div className='profile-image'></div>
+        <div className='profile-coment'>
+        <div className='member-info'>이예원 / 2학년</div>
+        <div className='member-coment'>안녕하세요. 다솜 메이커스 프론트앤드를 맡고 있습니다.</div>
         </div>
+        </div>
+        </div>
+        <div className='activity'>
+          <div className='activity-title'>ACTIVITY</div>
+       <div className='activity-project-box'>
+            <div className='activity-image'></div>
+            <div className='activity-info'>
+            <div className='project'>Project</div>
+            <div className='project-title'>경험이 없어도 누구나 참여할 수 있는 PROJECT</div>
+            <div className='project-subtitle'>
+              아이디어를 발견하고 동아리 내에서 팀 빌딩을 진행합니다. 
+              팀원들과 당신이 꿈꾸던 서비스를 직접 만들어보세요.</div>
+              </div>
+       </div>
+       </div>
     </div>
   );
 };
