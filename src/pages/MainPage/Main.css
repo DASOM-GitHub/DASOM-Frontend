@@ -219,9 +219,10 @@
     border-radius: 1.5em;
 }
 .main-5-slider-box img {
-    width: 12em;
-    height: auto;
+    width: 8em;
+    height: 9em;
     padding: 0;
+    border-radius: 0.5em;
 }
 .main-5-slider-img {
     background-color: #F5F5F5;
@@ -253,29 +254,31 @@
 }
 
 /* 도트 스타일링 */
-.slick-dots {
-    bottom: -30px; /* 도트의 위치를 조정 */
+.main-slick-dots {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin-bottom: -2.3em; /*도트 위치 */
   }
   
-  .slick-dots li {
-    margin: 0 5px; /* 도트 사이의 간격을 설정 */
+  .main-slick-dots li {
+    margin: 0 1em !important; /* 도트 사이의 간격을 설정 : css우선순위 */
   }
-  
-  .slick-dots li button {
-    font-size: 0; /* 숫자 제거를 위해 폰트 크기 0으로 설정 */
-    border: none; /* 버튼의 기본 테두리 제거 */
-    background: transparent; /* 버튼 배경 투명하게 설정 */
+
+  .main-slick-dots li button {
+    border: none; 
+    background: transparent; /* 버튼 배경 투명하게 */
   }
-  
-  .slick-dots li button:before {
-    content: ''; /* 숫자 대신 빈 콘텐츠 설정 */
-    width: 10px; /* 도트의 크기 */
-    height: 10px; /* 도트의 높이 */
+
+  .main-slick-dot {
+    width: 1em; /* 도트의 크기 */
+    height: 1em; /* 도트의 높이 */
     border-radius: 50%; /* 도트를 원형으로 만들기 */
-    background-color: #ccc; /* 기본 도트 색상 */
+    background-color: #F5F5F5; /* 기본 도트 색상 */
     display: inline-block; /* 인라인 블록으로 도트 배치 */
   }
   
-  .slick-dots li.slick-active button:before {
-    background-color: #000; /* 활성 도트의 색상 */
+  .main-slick-dots li.slick-active .main-slick-dot {
+    background-color: #444CFF; /* active 도트의 색상 */
   }

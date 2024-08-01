@@ -18,6 +18,15 @@ const Main = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
+    appendDots: dots => (
+      <div>
+        <ul className="main-slick-dots"> {dots} </ul>
+      </div>
+    ),
+    customPaging: i => (
+      <div className="main-slick-dot">
+      </div>
+    )
   };
 
   return (
@@ -136,10 +145,16 @@ const Main = () => {
                   </div>
                 </div>
                 <div className='main-5-slider-box'>
-                  <p>Slide 3</p>
+                  <div className='main-5-slider-img'>
+                    <img src={`${process.env.PUBLIC_URL}/main_img/2024MT.png`} alt='MT사진'/>
+                    <p>Slide 3</p>
+                  </div>
                 </div>
                 <div className='main-5-slider-box'>
-                  <p>Slide 4</p>
+                  <div className='main-5-slider-img'>
+                    <img src={`${process.env.PUBLIC_URL}/main_img/2024MT.png`} alt='MT사진'/>
+                    <p>Slide 4</p>
+                  </div>
                 </div>
               </Slider>
               <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt='next'
