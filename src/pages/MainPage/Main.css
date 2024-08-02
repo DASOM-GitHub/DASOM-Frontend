@@ -1,0 +1,325 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+
+
+
+.main{
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+    padding: 0;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 1page */
+.main-1page{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    gap: 12%;
+    background-color: #444CFF;
+    padding: 10% 0 10% 0;
+    margin-bottom: 60vw;
+}
+.main-title-box{
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    font-size: clamp(20px, 3.5vw, 56px);
+    font-weight: bold;
+    color: white;
+    margin-top: 1em;
+}
+.main-1pageImg{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    background-color: #F5F5F5;
+}
+.main-title p {
+    margin: 0;
+    margin-bottom: 0.3em;
+    padding: 0;
+}
+.main-subtitle {
+    margin-top: 1em;
+}
+.main-applybtn{
+    margin-left: 0.7em;
+    width: 0.7em;
+    height: auto;
+}
+
+/* 2page */
+.main-2page{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 60vw;
+}
+.main-2-contents {
+    align-items: center;
+    margin: 0 10% 0 10%;
+    width: 80%;
+    display: flex;
+}
+.main-2-title{
+    margin-left: 10%;
+    text-align: left;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.main-2-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    flex: 1;
+    margin-right: 2%;
+}
+.main-1box-title {
+    font-size: clamp(12px, 2vw, 48px);
+    font-weight: bold;
+}
+.main-2-1box {
+    background-color: #F5F5F5;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-size: clamp(8px, 1.2vw, 36px);
+    padding: 1em 3em 0.5em 2em;
+    border-radius: 1.5em;
+}
+.main-2-2box {
+    margin-left: 20%;
+    background-color: #F5F5F5;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-size: clamp(8px, 1.2vw, 36px);
+    padding: 1em 3em 0.5em 2em;
+    border-radius: 1.5em;
+}
+.main-2-3box {
+    background-color: #F5F5F5;
+    text-align: left;
+    width: fit-content;
+    height: fit-content;
+    font-size: clamp(8px, 1.2vw, 36px);
+    padding: 1em 3em 0.5em 2em;
+    border-radius: 1.5em;
+}
+.main-2pageImg {
+    width: 30vw;
+    height: 30vw;
+    background-color: #F5F5F5;
+    border-radius: 50%;
+}
+
+/* 3page */
+.main-3page{
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 60vw;
+}
+.main-3-title{
+    text-align: center;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+    margin-bottom: 3.5em;
+}
+.main-3-boxes{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: clamp(12px, 2vw, 48px);
+    gap: 2em;
+}
+.main-3-1box {
+    padding: 0.5em 0;
+    width: 18vw;
+    border-radius: 1.5em;
+    background-color: #F5F5F5;
+}
+
+/* 4page */
+.main-4page{
+    margin-left: 15%;
+    width: 70%;
+    height: auto;
+    justify-content: center;
+    margin-bottom: 60vw;
+}
+.main-4-title{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+}
+.main-4-title img {
+    margin-left: 0.2em;
+    width: 1.2em;
+    height: auto;
+}
+.main-4-subtitle{
+    text-align: left;
+    font-size: clamp(10px, 2vw, 48px);
+    margin-bottom: 1.7em;
+}
+.main-4-boxes1, .main-4-boxes2{
+    display: flex;
+    gap: 1.5em;
+    font-size: clamp(10px, 2vw, 48px);
+    color: white;
+}
+.main-4-boxes1{
+    margin-bottom: 1.5em;
+}
+.main-4-1box {
+    border-radius: 1em;
+    background-color: #444CFF;
+    padding: 1em 2em;
+}
+.main-4-2box {
+    border-radius: 1em;
+    background-color: #8280FF;
+    padding: 1em 2em;
+}
+
+/* 5page */
+.main-5page{
+    justify-content: center;
+    margin-bottom: 60vw;
+}
+.main-5-title{
+    margin-left: 15%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+    margin-bottom: 5vw;
+}
+.main-5-title img {
+    margin-left: 0.2em;
+    width: 1.2em;
+    height: auto;
+}
+.main-5-slider {
+    font-size: clamp(12px, 2vw, 48px);
+    font-weight: bold;
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+.main-5-slider-box {
+    position: relative;
+    border-radius: 1.5em;
+}
+.main-5-slider-box img {
+    width: 8em;
+    height: 9em;
+    padding: 0;
+    border-radius: 0.5em;
+}
+.main-5-slider-img {
+    background-color: #F5F5F5;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin: auto;
+    margin-top: 0.5em;
+    width: fit-content;
+}
+.main-5-slider-img p{
+    margin: 0.5em 0 0 0;
+}
+.main-5-prev-button, .main-5-next-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+    background-color: white;
+    width: 2em;
+    height: auto;
+}
+.main-5-prev-button {
+    left: -2em;  /* 슬라이더 컨테이너의 왼쪽 바깥에 배치 */
+}
+  
+.main-5-next-button {
+    right: -2em;  /* 슬라이더 컨테이너의 오른쪽 바깥에 배치 */
+}
+
+/* 도트 스타일링 */
+.main-slick-dots {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    position: absolute;  /* 위치 조정을 위해 절대 위치로 설정 */
+    bottom: -10vw;  /* 아래쪽 위치 조정 */
+    width: 100%;  /* 부모 컨테이너의 너비를 채움 */
+  }
+  
+  .main-slick-dots li {
+    margin: 0 0.5em !important; /* 도트 사이의 간격을 설정 : css우선순위 */
+  }
+
+  .main-slick-dots li button {
+    border: none; 
+    background: transparent; /* 버튼 배경 투명하게 */
+  }
+
+  .main-slick-dot {
+    width: 1em; /* 도트의 크기 */
+    height: 1em; /* 도트의 높이 */
+    border-radius: 50%; /* 도트를 원형으로 만들기 */
+    background-color: #F5F5F5; /* 기본 도트 색상 */
+    display: inline-block; /* 인라인 블록으로 도트 배치 */
+  }
+  
+  .main-slick-dots li.slick-active .main-slick-dot {
+    background-color: #444CFF; /* active 도트의 색상 */
+  }
+
+  /* 6page */
+.main-6page{
+    margin-bottom: 60vw;
+    background: linear-gradient(45deg, #A1C4FD, #C2E9FB);
+    padding: 6em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-6-smalltitle {
+    margin: 0;
+    font-size: clamp(12px, 2vw, 48px);
+}
+.main-6-bigtitle {
+    margin: 0;
+    margin: 0.8em 0;
+    font-size: clamp(20px, 4vw, 56px);
+    font-weight: bold;
+}
+.main-6-applybox {
+    align-items: center;
+    display: flex;
+    font-size: clamp(12px, 2vw, 48px);
+    font-weight: bold;
+    color: white;
+    background-color: #444CFF;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 20vw;
+    padding: 0.1em 3em;
+}
+.main-6-applybox img {
+    width: 1em;
+    height: 1em;
+    margin-left: 1em;
+}
