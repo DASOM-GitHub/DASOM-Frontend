@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import "./Footer.css";
-
+    /* 
 
 const Footer = () => {
   
   return (
+
     <div className='footer'>
       <p>Contact dmu_dasom@naver.com</p><br />
       <p>___</p>
@@ -17,4 +18,5 @@ const Footer = () => {
 };
 
 export default Footer;
+*/
 
