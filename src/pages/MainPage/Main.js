@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
 import { useInView } from 'react-intersection-observer';
+import Footer from '../../components/Footer';
 
 
 
@@ -182,7 +183,9 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </Container>
+    
   );
 };
 

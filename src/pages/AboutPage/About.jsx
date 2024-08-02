@@ -1,9 +1,54 @@
 import React, { useState, useEffect } from 'react';
 import "./About.css";
-import styled from 'styled-components';
+import Footer from "../../components/Footer";
 
+const LeadComponent = () => <div className='profile-container1'>
+<div className='profile-lead-image'></div>
+<div className='profile-coment'>
+<div className='member-info'>남호성 / 3학년</div>
+ <div className='member-coment'>안녕하세요. 다솜 회장을 맡고 있습니다.</div>
+</div>
+</div>;
+const FrontComponent = () => <div className='profile-container1'>
+<div className='profile-suhyun-image'></div>
+<div className='profile-coment'>
+<div className='member-info'>김수현 / 2학년</div>
+ <div className='member-coment'>안녕하세요. 다솜 프론트앤드팀장를 맡고 있습니다.</div>
+</div>
+</div>;
+const BackComponent = () => <div className='profile-container1'>
+<div className='profile-seongwan-image'></div>
+<div className='profile-coment'>
+<div className='member-info'>유승완 / 3학년</div>
+ <div className='member-coment'>안녕하세요. 다솜 백앤드 팀장을 맡고 있습니다.</div>
+</div>
+</div>;
+const DesignComponent = () =><div className='profile-container1'>
+<div className='profile-image'></div>
+<div className='profile-coment'>
+<div className='member-info'>이예원 / 2학년</div>
+ <div className='member-coment'>안녕하세요. 다솜 메이커스 디자인을 맡고 있습니다.</div>
+</div>
+</div>;
 
 const About = () => {
+    const [selectedComponent, setSelectedComponent] = useState(null);
+
+    const renderComponent = () => {
+        switch (selectedComponent) {
+            case 'lead':
+                return <LeadComponent />;
+            case 'front':
+                return <FrontComponent />;
+            case 'back':
+                return <BackComponent />;
+            case 'design':
+                return <DesignComponent />;
+            default:
+                return <div>Select a box to view content</div>;
+        }
+    };
+
   
 
   return (
@@ -26,20 +71,25 @@ const About = () => {
         </div>
         </div>
       <div className='member'>
-        <div className='member-title'>MEMBER</div>
-        <div className='member-box'>
-        <button className='member-lead'>LEAD</button>
-        <button className='member-core'>CORE</button>
-        <button className='member-front'>FRONT</button>
-        <button className='member-back'>BACK</button>
+        <div className='member-title'>MAKERS</div>
+        <div>
+            <div className='member-box'>
+                <div className='member-lead' onClick={() => setSelectedComponent('lead')}>LEAD</div>
+                <div className='member-front' onClick={() => setSelectedComponent('front')}>FRONT</div>
+                <div className='member-back' onClick={() => setSelectedComponent('back')}>BACK</div>
+                <div className='member-design' onClick={() => setSelectedComponent('design')}>DESIGN</div>
+            </div>
+            <div className='content'>
+                {renderComponent()}
+            </div>
         </div>
-        <div className='profile-container1'>
+        {/* <div className='profile-container1'>
         <div className='profile-image'></div>
         <div className='profile-coment'>
         <div className='member-info'>이예원 / 2학년</div>
         <div className='member-coment'>안녕하세요. 다솜 메이커스 프론트앤드를 맡고 있습니다.</div>
         </div>
-        </div>
+        </div> */}
         </div>
         <div className='activity'>
           <div className='activity-title'>ACTIVITY</div>
@@ -94,6 +144,7 @@ const About = () => {
               </div>
        </div>
        </div>
+       <Footer />
     </div>
   );
 };
