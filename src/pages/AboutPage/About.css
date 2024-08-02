@@ -83,7 +83,7 @@
     margin-left: 21.7%;
     margin-right: 49%;
     font-weight: bold;
-    margin-top: 30%;
+    margin-top: 50%;
     font-size: 2.92vw;
 }
 
@@ -91,7 +91,7 @@
     margin-left: 21.7%;
     display: flex;
     font-weight: bold;
-    font-size: 1.25vw; 
+    font-size: 1.5vw; 
     display: flex;
     margin-top: 3.65%;
     
@@ -102,6 +102,7 @@
     height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
     border-radius: 25px;
     border: none;
+    font-size: 1.2vw
    
 }
 
@@ -119,6 +120,7 @@
     height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
     border-radius: 25px;
     border: none;
+    font-size: 1.2vw
 }
 
 .member-core:hover {
@@ -185,7 +187,7 @@
     align-items: center;
     flex-direction: column; 
     padding: 2vw; /* 패딩 설정 (뷰포트 너비의 비율) */
-    margin-top: 30%;
+    margin-top: 50%;
 
   }
   
@@ -250,4 +252,78 @@
     color:#000000; /* 색상 설정 */
     margin-left: 4%;
 
+  }
+  .activity-image2{
+    width: 40vw; /* 너비를 뷰포트 너비의 비율로 설정 */
+    height: 30vh; /* 높이를 뷰포트 높이의 비율로 설정 */
+    border-radius: 10px;
+    background-image: url('../../iamges/activity/study.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+  }
+  .activity-image3{
+    width: 45vw; /* 너비를 뷰포트 너비의 비율로 설정 */
+    height: 30vh; /* 높이를 뷰포트 높이의 비율로 설정 */
+    border-radius: 10px;
+    background-image: url('../../iamges/activity/makers.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+  }
+  .activity-image4{
+    width: 40vw; /* 너비를 뷰포트 너비의 비율로 설정 */
+    height: 30vh; /* 높이를 뷰포트 높이의 비율로 설정 */
+    border-radius: 10px;
+    background-image: url('../../iamges/activity/hackathon.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+
+  }
+  .activity-image5{
+    width: 30vw; /* 너비를 뷰포트 너비의 비율로 설정 */
+    height: 30vh; /* 높이를 뷰포트 높이의 비율로 설정 */
+    border-radius: 10px;
+    background-image: url('../../iamges/activity/mt.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    margin-left: -5%;
+  }
+
+  .makers{
+    font-size: 1vw; /* 폰트 크기 조정 */
+    font-weight: bold;
+    margin-bottom: 1vw; /* 제목과 아래 요소 사이 간격 */
+    margin-left: 3%;
+    background-color: #444CFF;
+    color: #ffffff;
+    width: 20%;
+    height: 2.4vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+    flex-direction: column; 
+  }
+
+  .hackathon{
+    font-size: 1vw; /* 폰트 크기 조정 */
+    font-weight: bold;
+    margin-bottom: 1vw; /* 제목과 아래 요소 사이 간격 */
+    margin-left: 3%;
+    background-color: #444CFF;
+    color: #ffffff;
+    width: 30%;
+    height: 2.4vw;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 4%;
+    flex-direction: column; 
   }

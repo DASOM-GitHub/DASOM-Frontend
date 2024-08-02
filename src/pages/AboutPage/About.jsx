@@ -53,6 +53,46 @@ const About = () => {
               팀원들과 당신이 꿈꾸던 서비스를 직접 만들어보세요.</div>
               </div>
        </div>
+       <div className='activity-project-box'>
+            <div className='activity-image2'></div>
+            <div className='activity-info'>
+            <div className='project'>Study</div>
+            <div className='project-title'>공부하고 싶은 언어를 함께 나눌 수 있는 STUDY</div>
+            <div className='project-subtitle'>
+              자신이 공부하고싶었던 언어나 프레임워크를 동아리 부원들과
+              심도있게 공부해보세요.</div>
+              </div>
+       </div>
+       <div className='activity-project-box'>
+            <div className='activity-image3'></div>
+            <div className='activity-info'>
+            <div className='makers'>Makers</div>
+            <div className='project-title'>DASOM 자체 홈페이지를 유지보수하는 MAKERS</div>
+            <div className='project-subtitle'>
+              DASOM에서 프로젝트를 기획하고 개발해보며 
+              팀원들과 프로젝트를 진행해요.</div>
+              </div>
+       </div>
+       <div className='activity-project-box'>
+            <div className='activity-image4'></div>
+            <div className='activity-info'>
+            <div className='hackathon'>Hackathon</div>
+            <div className='project-title'>분기별로 진행하는 다솜만의 HACKATHON</div>
+            <div className='project-subtitle'>
+              DASOM에서 분기별로 진행하는 자체 해커톤에서
+              자신의 아이디어를 펼쳐 보세요.</div>
+              </div>
+       </div>
+       <div className='activity-project-box'>
+            <div className='activity-image5'></div>
+            <div className='activity-info'>
+            <div className='project'>MT</div>
+            <div className='project-title'>동계 / 하계 MT</div>
+            <div className='project-subtitle'>
+              동계 / 하계 MT를 즐기며 
+              동아리 부원들과 친목을 다져요.</div>
+              </div>
+       </div>
        </div>
     </div>
   );
