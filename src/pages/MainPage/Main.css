@@ -7,6 +7,7 @@
     padding: 0;
     align-items: center;
     justify-content: center;
+    background-color: white;
 }
 
 /* 1page */
@@ -317,6 +318,7 @@
     height: fit-content;
     border-radius: 20vw;
     padding: 0.1em 3em;
+    cursor: pointer;
 }
 .main-6-applybox img {
     width: 1em;
