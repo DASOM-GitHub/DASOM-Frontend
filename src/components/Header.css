@@ -52,7 +52,7 @@ img {
     margin: 0 30px;
     color: #000AFF;
     cursor: pointer;
-    height: 25px;
+    height: 20px;
     width: auto;
     font-weight: bold;
     font-size: 24px;
@@ -62,6 +62,11 @@ img {
     text-decoration: none;
     color: #000AFF;
 }
+
+.menu li:hover {
+    text-decoration: underline;
+}
+
 
 /* 모바일 반응형 */
 @media screen and (max-width: 786px) {

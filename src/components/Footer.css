@@ -1,14 +1,17 @@
 .footer {
-    font-family: 'Inter', sans-serif;
     width: 100%;
-    padding: 20px 0;
+    height: 50%;
+    /* padding: 20px 0; */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+    flex-direction: column;  
+}
 
 p {
-    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
 }
 
 .copy {
