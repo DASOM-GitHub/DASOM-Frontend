@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./About.css";
 import styled from 'styled-components';
+import Footer from "../../components/Footer";
 
 
 const About = () => {
@@ -94,6 +95,7 @@ const About = () => {
               </div>
        </div>
        </div>
+       <Footer />
     </div>
   );
 };

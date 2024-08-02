@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./Footer.css";
-    /* 
+    
 
 const Footer = () => {
   
@@ -18,5 +18,5 @@ const Footer = () => {
 };
 
 export default Footer;
-*/
+
 
