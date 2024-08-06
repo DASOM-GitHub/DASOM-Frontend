@@ -35,7 +35,14 @@
     width: 30vw;
     height: 30vw;
     border-radius: 50%;
-    background-color: #F5F5F5;
+    background-color: none;
+    border: solid 3px #444CFF;
+}
+.main-1pageImg img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: solid 3px #444CFF;
 }
 .main-title p {
     margin: 0;
@@ -88,7 +95,7 @@
     width: fit-content;
     height: fit-content;
     font-size: clamp(8px, 1.2vw, 36px);
-    padding: 1em 3em 0.5em 2em;
+    padding: 1em 4em 0.5em 2em;
     border-radius: 1.5em;
 }
 .main-2-2box {
@@ -98,7 +105,7 @@
     width: fit-content;
     height: fit-content;
     font-size: clamp(8px, 1.2vw, 36px);
-    padding: 1em 3em 0.5em 2em;
+    padding: 1em 4em 0.5em 2em;
     border-radius: 1.5em;
 }
 .main-2-3box {
@@ -107,7 +114,7 @@
     width: fit-content;
     height: fit-content;
     font-size: clamp(8px, 1.2vw, 36px);
-    padding: 1em 3em 0.5em 2em;
+    padding: 1em 4em 0.5em 2em;
     border-radius: 1.5em;
 }
 .main-2pageImg {
@@ -161,7 +168,7 @@
 }
 .main-4-title img {
     margin-left: 0.2em;
-    width: 1.2em;
+    width: 0.8em;
     height: auto;
 }
 .main-4-subtitle{
@@ -206,8 +213,9 @@
 }
 .main-5-title img {
     margin-left: 0.2em;
-    width: 1.2em;
+    width: 0.8em;
     height: auto;
+    cursor: pointer;
 }
 .main-5-slider {
     font-size: clamp(12px, 2vw, 48px);
@@ -244,7 +252,7 @@
     cursor: pointer;
     z-index: 1;
     background-color: white;
-    width: 2em;
+    width: 1.5em;
     height: auto;
 }
 .main-5-prev-button {
