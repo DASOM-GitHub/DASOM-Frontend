@@ -25,6 +25,9 @@
     padding: 2px 15px;
     outline: none;
     margin-top: 80px;
+    &:focus {
+      border: 2px solid #444cff;
+    }
   }
   .apply-input-text2 {
     border: 1px solid #444cff;
@@ -37,6 +40,9 @@
     word-wrap: break-word;
     resize: none;
     padding: 10px 10px;
+    &:focus {
+      border: 2px solid #444cff;
+    }
   }
   .apply-grade-box {
     display: flex;
@@ -49,6 +55,7 @@
   }
   .apply-grade.selected {
     opacity: 1;
+    font-weight: 700;
   }
   .apply-grade-radio {
     appearance: none;
@@ -112,6 +119,9 @@
     padding: 2px 15px;
     outline: none;
     margin-top: 80px;
+    &:focus {
+      border: 2px solid #444cff;
+    }
   }
   .apply-input-text2 {
     border: 1px solid #444cff;
@@ -124,6 +134,9 @@
     word-wrap: break-word;
     resize: none;
     padding: 10px 10px;
+    &:focus {
+      border: 2px solid #444cff;
+    }
   }
   .apply-grade-box {
     display: flex;
@@ -136,6 +149,7 @@
   }
   .apply-grade.selected {
     opacity: 1;
+    font-weight: 700;
   }
   .apply-grade-radio {
     appearance: none;
