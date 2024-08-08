@@ -8,12 +8,10 @@
 }
 
 .container {
-    max-width: 1200px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 132px;
     margin-top: 30px;
 }
 
@@ -25,14 +23,16 @@ img {
     display: flex;
     height: 40px;
     width: auto;
+    margin-left: 40px;
 
 }
 
 .icon {
     display:flex;
     list-style-type: none;
-    margin-top: 10px;
+    margin-top: 1vw;
     padding: 0;
+    margin-right: 40px;
 }
 
 .icon img {
@@ -52,10 +52,10 @@ img {
     margin: 0 30px;
     color: #000AFF;
     cursor: pointer;
-    height: 25px;
+    height: 20px;
     width: auto;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .menu a {
@@ -63,30 +63,55 @@ img {
     color: #000AFF;
 }
 
-/* 모바일 반응형 */
+.menu li:hover {
+    text-decoration: underline;
+}
+
+
+
+/* 반응형 */
 @media screen and (max-width: 786px) {
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 8px 24px;
+    .header {
+        height: 270px;
+        align-items: center;
+    }
+    .logo img {
+        align-items: center;
+         margin: 0;
     }
 
-    .menu li {
-        width: 100%;
-        margin: 10px 0;
-    }
-        .menu {
-        display: none; /* 모바일 화면에서는 메뉴 숨기기 */
+    .container {
         flex-direction: column;
         align-items: center;
     }
+
+    .menu li {
+        height: auto;
+        font-size: 20px;
+        text-align: center;
+        margin: 16px 0;
+    }
+    .menu {
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        padding: 0;
+    }
     .icon {
         display: flex;
-        justify-content: center;
-        width: 100%
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .icon li {
+        align-items: center;
     }
 
     .icon img {
         height: 1.5rem;
+        margin: 0;
+        padding: 10px;
     }
 }
