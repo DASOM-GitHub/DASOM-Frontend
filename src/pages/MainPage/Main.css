@@ -51,6 +51,7 @@
 }
 .main-subtitle {
     margin-top: 1em;
+    cursor: pointer;
 }
 .main-applybtn{
     margin-left: 0.7em;

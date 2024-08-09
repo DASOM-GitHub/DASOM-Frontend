@@ -72,9 +72,9 @@ const Main = () => {
                 <p>컴퓨터소프트웨어학과</p>
                 <p>전공동아리 DASOM</p>
               </div>
-              <div className='main-subtitle'>
+              <div className='main-subtitle' onClick={handleApplyNavigation}>
                 34기 지원하기
-                <img className='main-applybtn' src={`${process.env.PUBLIC_URL}/main_img/arrow.png`} alt=">" onClick={handleApplyNavigation}/>
+                <img className='main-applybtn' src={`${process.env.PUBLIC_URL}/main_img/arrow.png`} alt=">"/>
               </div>
             </div>
             
