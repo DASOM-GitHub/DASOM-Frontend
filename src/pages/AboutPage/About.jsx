@@ -74,7 +74,7 @@ const BackComponent = () => (
     </div>
     </div>
 <div className='profile-container-right'>
-      <div className='profile-taewoo-image-right'></div>
+      <div className='profile-yejin-image-right'></div>
       <div className='profile-taewoo-coment-right'>
         <div className='member-taewoo-info-right'>현예진 / 1학년</div>
         <div className='member-taewoo-coment'>안녕하세요. 다솜 백엔드를 맡고 있습니다.</div>

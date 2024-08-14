@@ -9,6 +9,8 @@ import Recruit from './pages/RecruitPage/Recruit';
 import Apply from './pages/ApplyPage/Apply';
 import ApplySuccess from './pages/ApplyPage/ApplySuccess';
 import FAQ from './pages/FAQPage/FAQ';
+import Admin from './pages/AdminPage/Admin';
+import AdminMain from './pages/AdminPage/AdminMain';
 
 const Layout = () => {
   const location = useLocation();
@@ -38,6 +40,8 @@ function App() {
               <Route path="apply" element={<Apply />} />
               <Route path="applysuccess" element={<ApplySuccess />} />
               <Route path="faq" element={<FAQ />} />
+              <Route path="admin" element={<Admin />} />
+              <Route path="adminmain" element={<AdminMain />} />
             </Route>
           </Routes>
         </Router>
