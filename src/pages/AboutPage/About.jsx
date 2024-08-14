@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import "./About.css";
 import Footer from "../../components/Footer";
 
+
+
 const LeadComponent = () => <div className='profile-container1'>
 <div className='profile-lead-image'></div>
 <div className='profile-coment'>
@@ -45,7 +47,7 @@ const About = () => {
             case 'design':
                 return <DesignComponent />;
             default:
-                return <div>Select a box to view content</div>;
+                return <div></div>;
         }
     };
 
