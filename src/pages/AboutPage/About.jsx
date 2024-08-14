@@ -11,21 +11,78 @@ const LeadComponent = () => <div className='profile-container1'>
  <div className='member-coment'>안녕하세요. 다솜 회장을 맡고 있습니다.</div>
 </div>
 </div>;
-const FrontComponent = () => <div className='profile-container1'>
-<div className='profile-suhyun-image'></div>
-<div className='profile-coment'>
-<div className='member-info'>김수현 / 2학년</div>
- <div className='member-coment'>안녕하세요. 다솜 프론트앤드팀장를 맡고 있습니다.</div>
-</div>
-</div>;
-const BackComponent = () => <div className='profile-container1'>
+const FrontComponent = () => (
+  <>
+    <div className='profile-suhyun-container'>
+      <div className='profile-suhyun-image'></div>
+      <div className='profile-suhyun-coment'>
+        <div className='member-suhyun-info'>김수현 / 2학년</div>
+        <div className='member-suhyun-coment'>안녕하세요. 다솜 프론트엔드팀장를 맡고 있습니다.</div>
+      </div>
+    </div>
+    <div className='profile-container-right'>
+      <div className='profile-yewon-image-right'></div>
+      <div className='profile-yewon-coment-right'>
+        <div className='member-yewon-info-right'>이예원 / 2학년</div>
+        <div className='member-yewon-coment'>안녕하세요. 다솜 프론트엔드를 맡고 있습니다.</div>
+      </div>
+    </div>
+    <div className='profile-sunghwan-container'>
+      <div className='profile-suhyun-image'></div>
+      <div className='profile-sunghwan-coment'>
+        <div className='member-sunghwan-info'>정성환 / 2학년</div>
+        <div className='member-sunghwan-coment'>안녕하세요. 다솜 프론트엔드를 맡고 있습니다.</div>
+      </div>
+    </div>
+    <div className='profile-container-right'>
+      <div className='profile-taewoo-image-right'></div>
+      <div className='profile-taewoo-coment-right'>
+        <div className='member-taewoo-info-right'>김태우 / 2학년</div>
+        <div className='member-taewoo-coment'>안녕하세요. 다솜 프론트엔드를 맡고 있습니다.</div>
+      </div>
+    </div>
+    <div className='profile-sunjung-container'>
+      <div className='profile-sunjung-image'></div>
+      <div className='profile-sunjung-coment'>
+        <div className='member-sunjung-info'>진선정 / 1학년</div>
+        <div className='member-sunjung-coment'>안녕하세요. 다솜 프론트엔드를 맡고 있습니다.</div>
+      </div>
+    </div>
+  </>
+);
+const BackComponent = () => (
+  <>
+  <div className='profile-container1'>
 <div className='profile-seongwan-image'></div>
 <div className='profile-coment'>
 <div className='member-info'>유승완 / 3학년</div>
- <div className='member-coment'>안녕하세요. 다솜 백앤드 팀장을 맡고 있습니다.</div>
+ <div className='member-coment'>안녕하세요. 다솜 백엔드 팀장을 맡고 있습니다.</div>
 </div>
-</div>;
-const DesignComponent = () =><div className='profile-container1'>
+</div>
+<div className='profile-container-right'>
+      <div className='profile-junyoung-image-right'></div>
+      <div className='profile-junyoung-coment-right'>
+        <div className='member-junyoung-info-right'>최준영 / 3학년</div>
+        <div className='member-junyoung-coment'>안녕하세요. 다솜 백엔드를 맡고 있습니다.</div>
+      </div>
+    </div>
+    <div className='profile-younjae-container'>
+    <div className='profile-seongwan-image'></div>
+    <div className='profile-coment'>
+    <div className='member-info'>조윤재 / 1학년</div>
+    <div className='member-coment'>안녕하세요. 다솜 백엔드를 맡고 있습니다.</div>
+    </div>
+    </div>
+<div className='profile-container-right'>
+      <div className='profile-taewoo-image-right'></div>
+      <div className='profile-taewoo-coment-right'>
+        <div className='member-taewoo-info-right'>현예진 / 1학년</div>
+        <div className='member-taewoo-coment'>안녕하세요. 다솜 백엔드를 맡고 있습니다.</div>
+      </div>
+    </div>
+</>
+);
+const DesignComponent = () => <div className='profile-container1'>
 <div className='profile-image'></div>
 <div className='profile-coment'>
 <div className='member-info'>이예원 / 2학년</div>
@@ -34,7 +91,7 @@ const DesignComponent = () =><div className='profile-container1'>
 </div>;
 
 const About = () => {
-    const [selectedComponent, setSelectedComponent] = useState(null);
+    const [selectedComponent, setSelectedComponent] = useState('lead');
 
     const renderComponent = () => {
         switch (selectedComponent) {

@@ -1,5 +1,5 @@
 import "./App.css";
-import { BrowserRouter as Router, Outlet, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { AppProvider } from "./contexts/AppContext";
 import Main from "./pages/MainPage/Main";
 import Header from "./components/Header";
@@ -11,9 +11,14 @@ import ApplySuccess from './pages/ApplyPage/ApplySuccess';
 import FAQ from './pages/FAQPage/FAQ';
 
 const Layout = () => {
+  const location = useLocation();
+
+  // 헤더를 보이게 할 페이지 경로들
+  const showHeaderPaths = ["/","/Main", "/main", "/about", "/recruit", "/FAQ"];
+
   return (
     <div>
-      <Header />
+      {showHeaderPaths.includes(location.pathname) && <Header />}
       <Outlet />
     </div>
   );
