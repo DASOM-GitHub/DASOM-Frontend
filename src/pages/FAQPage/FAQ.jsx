@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react'; 
+import OPENICON from '../../iamges/icon/faq-open-icon.png'; 
+import CLOSEICON from '../../iamges/icon/faq-close-icon.png';
 import "./FAQ.css";
-
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -19,22 +20,28 @@ const FAQ = () => {
 
   return (
     <div className="faq-container">
-      <div className='faq-text'> 
+      <div className='faq-title'> 
         <h2>FAQ</h2>
-        </div>
+      </div>
      
       <div className="faq-list">
         {faqs.map((faq, index) => (
           <div key={index} className="faq-item">
             <div className={`faq-question ${activeIndex === index ? 'active' : ''}`} onClick={() => handleClick(index)}>
               {faq.question}
-              <span>{activeIndex === index ? '▲' : '▼'}</span>
+              <span>
+                {activeIndex === index ? (
+                  <img src={CLOSEICON} alt="Close Icon" className="faq-close-icon" />
+                ) : (
+                  <img src={OPENICON} alt="Open Icon" className="faq-open-icon" />
+                )}
+              </span>
             </div>
             {activeIndex === index && (
               <div className="faq-answer">
                 {faq.answer.split('\n').map((line, i) => (
                   <React.Fragment key={i}>
-                    {line}
+                    {line}  
                     <br />
                   </React.Fragment>
                 ))}
@@ -43,11 +50,11 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-      <button className="more-questions-button">아직 궁금한 점이 있다면 →</button>
-    </div>
 
+      <button className="faq-button">아직 궁금한 점이 있다면 →</button>
+      </div>
+      
   );
 };
 
 export default FAQ;
-
