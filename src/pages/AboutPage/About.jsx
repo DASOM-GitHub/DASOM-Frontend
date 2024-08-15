@@ -4,13 +4,31 @@ import Footer from "../../components/Footer";
 
 
 
-const LeadComponent = () => <div className='profile-container1'>
+const LeadComponent = () => (
+<>
+<div className='profile-container1'>
 <div className='profile-lead-image'></div>
 <div className='profile-coment'>
-<div className='member-info'>남호성 / 3학년</div>
- <div className='member-coment'>안녕하세요. 다솜 회장을 맡고 있습니다.</div>
+<div className='member-info'>남호성 / 회장</div>
+ <div className='member-coment'>안녕하세요. 다솜 회장 남호성입니다. 다솜 최고!</div>
 </div>
-</div>;
+</div>
+<div className='profile-container-right'>
+<div className='profile-seongwan-image-right'></div>
+<div className='profile-seongwan-coment-right'>
+<div className='member-seongwan-info-right'>유승완 / 백엔드 팀장</div>
+ <div className='member-seongwan-coment-right'>안녕하세요! 백엔드와 서버 개발을 맡고 있습니다.</div>
+</div>
+</div>
+<div className='profile-suhyun-lead-container'>
+      <div className='profile-suhyun-image'></div>
+      <div className='profile-suhyun-coment'>
+        <div className='member-suhyun-info'>김수현 / 프론트엔드 팀장</div>
+        <div className='member-suhyun-coment'>안녕하세요. 프론트를 맡고 있습니다. 잘부탁드려요!</div>
+      </div>
+    </div>
+</>
+);
 const FrontComponent = () => (
   <>
     <div className='profile-suhyun-container'>
@@ -24,7 +42,7 @@ const FrontComponent = () => (
       <div className='profile-yewon-image-right'></div>
       <div className='profile-yewon-coment-right'>
         <div className='member-yewon-info-right'>이예원 / 2학년</div>
-        <div className='member-yewon-coment'>안녕하세요. 다솜 프론트엔드를 맡고 있습니다.</div>
+        <div className='member-yewon-coment'>안녕하세요. 프론트엔드 개발자를 꿈꾸고 있습니다. 😀</div>
       </div>
     </div>
     <div className='profile-sunghwan-container'>
@@ -56,7 +74,7 @@ const BackComponent = () => (
 <div className='profile-seongwan-image'></div>
 <div className='profile-coment'>
 <div className='member-info'>유승완 / 3학년</div>
- <div className='member-coment'>안녕하세요. 다솜 백엔드 팀장을 맡고 있습니다.</div>
+ <div className='member-coment'>안녕하세요! 백엔드와 서버 개발을 맡고 있습니다.</div>
 </div>
 </div>
 <div className='profile-container-right'>
@@ -75,7 +93,7 @@ const BackComponent = () => (
     </div>
 <div className='profile-container-right'>
       <div className='profile-yejin-image-right'></div>
-      <div className='profile-taewoo-coment-right'>
+      <div className='profile-junyoung-coment-right'>
         <div className='member-taewoo-info-right'>현예진 / 1학년</div>
         <div className='member-taewoo-coment'>안녕하세요. 다솜 백엔드를 맡고 있습니다.</div>
       </div>
@@ -86,7 +104,7 @@ const DesignComponent = () => <div className='profile-container1'>
 <div className='profile-image'></div>
 <div className='profile-coment'>
 <div className='member-info'>이예원 / 2학년</div>
- <div className='member-coment'>안녕하세요. 다솜 메이커스 디자인을 맡고 있습니다.</div>
+ <div className='member-coment'>안녕하세요. 다솜 메이커스 UI 디자인을 하고있습니다.</div>
 </div>
 </div>;
 

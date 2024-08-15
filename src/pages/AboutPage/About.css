@@ -104,7 +104,15 @@
 .profile-container-right{
   margin-left: 50%;   
 
-  
+}
+
+.profile-suhyun-lead-container{
+  margin-left: 21.7%;
+  margin-right: 49%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 7%;
+  width: 100%;
 }
 
 .profile-suhyun-image-right{
@@ -137,7 +145,7 @@
 .profile-yewon-coment-right{
     flex-direction: column;
     position: absolute;
-    margin-left: -15%;
+    margin-left: -17%;
     margin-top: -8%;
     background-color: #EEEEEE;
     border-radius: 30px;
@@ -146,7 +154,7 @@
 }
 
 .member-yewon-info-right{
-  margin-left: 65%;
+  margin-left: 70%;
   font-size: 1.25vw;    
   font-weight: bold;
   margin-bottom: 1vw;
@@ -197,6 +205,44 @@
   color: #000000;
 }
 /*taewoo*/
+
+.profile-seongwan-image-right{
+  
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%; /* 원형으로 만들기 */
+  background-image: url('../../iamges/member-profile/seonghwan2.jpeg'); /* 이미지 URL */
+  background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+  background-position: center; /* 이미지 가운데 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  margin-left: 38%;
+  margin-top: 2%;
+}
+
+
+.profile-seongwan-coment-right{
+    flex-direction: column;
+    position: absolute;
+    margin-left: -15%;
+    margin-top: -8%;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 4%;
+    
+}
+
+.member-seongwan-info-right{
+  margin-left: 55%;
+  font-size: 1.25vw;    
+  font-weight: bold;
+  margin-bottom: 1vw;
+  
+}
+
+.member-seongwan-coment-right{
+  font-size: 1.25vw;    
+  color: #000000;
+}
 
 /* right-part*/
 
@@ -282,7 +328,7 @@
     width: 10vw;
     height: 10vw;
     border-radius: 50%; /* 원형으로 만들기 */
-    background-image: url('../../iamges/member-profile/hosung.JPG'); /* 이미지 URL */
+    background-image: url('../../iamges/member-profile/hosung2.JPG'); /* 이미지 URL */
     background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
     background-position: center; /* 이미지 가운데 정렬 */
     background-repeat: no-repeat; /* 이미지 반복 방지 */
@@ -413,7 +459,7 @@
     width: 10vw;
     height: 10vw;
     border-radius: 50%; /* 원형으로 만들기 */
-    background-image: url('../../iamges/member-profile/seonghwanProfile.jpeg'); /* 이미지 URL */
+    background-image: url('../../iamges/member-profile/seonghwan2.jpeg'); /* 이미지 URL */
     background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
     background-position: center; /* 이미지 가운데 정렬 */
     background-repeat: no-repeat; /* 이미지 반복 방지 */
