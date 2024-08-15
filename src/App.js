@@ -11,6 +11,7 @@ import ApplySuccess from './pages/ApplyPage/ApplySuccess';
 import FAQ from './pages/FAQPage/FAQ';
 import Admin from './pages/AdminPage/Admin';
 import AdminMain from './pages/AdminPage/AdminMain';
+import ScrollToTop from "./components/ScrollToTop";
 
 const Layout = () => {
   const location = useLocation();
@@ -31,6 +32,7 @@ function App() {
     <div className="app">
       <AppProvider>
         <Router>
+        <ScrollToTop />
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Main />} />
