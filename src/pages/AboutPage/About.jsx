@@ -17,7 +17,7 @@ const FrontComponent = () => (
       <div className='profile-suhyun-image'></div>
       <div className='profile-suhyun-coment'>
         <div className='member-suhyun-info'>김수현 / 2학년</div>
-        <div className='member-suhyun-coment'>안녕하세요. 다솜 프론트엔드팀장를 맡고 있습니다.</div>
+        <div className='member-suhyun-coment'>안녕하세요. 프론트를 맡고 있습니다. 잘부탁드려요!</div>
       </div>
     </div>
     <div className='profile-container-right'>
@@ -28,7 +28,7 @@ const FrontComponent = () => (
       </div>
     </div>
     <div className='profile-sunghwan-container'>
-      <div className='profile-suhyun-image'></div>
+      <div className='profile-sunghwan-image'></div>
       <div className='profile-sunghwan-coment'>
         <div className='member-sunghwan-info'>정성환 / 2학년</div>
         <div className='member-sunghwan-coment'>안녕하세요. 다솜 프론트엔드를 맡고 있습니다.</div>
@@ -45,7 +45,7 @@ const FrontComponent = () => (
       <div className='profile-sunjung-image'></div>
       <div className='profile-sunjung-coment'>
         <div className='member-sunjung-info'>진선정 / 1학년</div>
-        <div className='member-sunjung-coment'>안녕하세요. 다솜 프론트엔드를 맡고 있습니다.</div>
+        <div className='member-sunjung-coment'>안녕하세요, 다솜 메이커스 진선정입니다.</div>
       </div>
     </div>
   </>
@@ -67,7 +67,7 @@ const BackComponent = () => (
       </div>
     </div>
     <div className='profile-younjae-container'>
-    <div className='profile-seongwan-image'></div>
+    <div className='profile-younjae-image'></div>
     <div className='profile-coment'>
     <div className='member-info'>조윤재 / 1학년</div>
     <div className='member-coment'>안녕하세요. 다솜 백엔드를 맡고 있습니다.</div>
