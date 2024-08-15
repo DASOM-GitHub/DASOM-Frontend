@@ -1,3 +1,4 @@
+/*
 body{
     background: #F5F5F5;
     
@@ -37,10 +38,7 @@ body{
 
   }
   
-  /* .faq-question.active{
-    font-weight: bold;
-    color: blue;
-  } */
+  
  
   
   .faq-answer {
@@ -79,9 +77,245 @@ body{
   .faq-close-icon, .faq-open-icon {
     width: 1.5vw;
   }
+*/
+
+/* .faq-question.active{
+    font-weight: bold;
+    color: blue;
+  } */
 
 
 
+  body {
+    background: #F5F5F5;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.faq-close-icon, .faq-open-icon {
+  width: 1.5vw;
+}
 
+.faq-question {
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 1vh 1vw;
+  border-radius: 0.5vw;
+}
 
+.faq-answer {
+  padding: 3vh 1.5vw 1.5vh 3vw;
+  line-height: 2.5vh;
+  border: 0.1vw solid #ccc;
+  border-radius: 0.8vw;
+  border-top: none;
+  background: #fafafa;
+  margin-top: 2vh;
+}
+
+.faq-button {
+  display: block;
+  background: #5A58FF;
+  color: white;
+  border: none;
+  border-radius: 2.0vw;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  height: 5vh;
+  font-weight: bold;
+  margin-top: 7vh;
+  transition: background-color 0.3s ease;
+}
+
+.faq-button:hover {
+  background: #0056b3;
+}
+
+/* 데스크탑 (1200px 이상) */
+@media screen and (min-width: 1200px) {
+    .faq-container {
+        width: 100vw;
+        margin: 0 auto;
+       
+    }
+
+    .faq-title {
+        font-size: 1.5vw;
+        text-align: center;
+    }
+
+    .faq-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        width: 50vw;
+        font-size: 1.2vw;
+        margin-top: 4vh;
+        margin-left: 26vw;
+    
+    }
+
+    .faq-item {
+        width: 24vw;
+        margin-bottom: 2vh;
+    }
+    .faq-question {
+      justify-content: space-between;
+      cursor: pointer;
+      padding: 1vh 1vw;
+      border-radius: 0.5px;
   
+    }
+    .faq-answer {
+      padding: 3vh 1.5vw 1.5vh 3vw; 
+      line-height: 2.5vh; 
+      border: 0.1vw solid #ccc; 
+      border-radius: 0.6vw; 
+      border-top: none;
+      background: #fafafa;
+      margin-top: 2vh; 
+      width: 20vw;
+      font-size: 0.8vw; 
+      height: 7vh;
+    }
+
+    .faq-button {
+      display: block;
+      width: 17vw;
+      background: #5A58FF;
+      color: white;
+      border: none;
+      border-radius: 1.0vw;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      height: 5vh;
+      font-weight: bold;
+      margin-top: 7vh; 
+      margin-left: 41vw; 
+    }
+}
+
+/* 노트북 (992px 이상 1199px 이하) */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .faq-container {
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .faq-title {
+        font-size: 2vw;
+        text-align: center;
+        width: 100%;
+    }
+
+    .faq-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        width: 70vw;
+        margin-top: 4vh;
+        margin-left: 22vw;
+    }
+
+    .faq-item {
+        width: 30vw;
+        margin-bottom: 3vh;
+      
+    }
+
+    .faq-answer {
+        width: 26vw;
+        font-size: 1.2vw;
+    }
+
+    .faq-button {
+        width: 22vw;
+        margin-left: 38vw;
+    }
+}
+
+/* 태블릿 (768px 이상 991px 이하) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .faq-container {
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .faq-title {
+        font-size: 2.5vw;
+        text-align: center;
+    }
+
+    .faq-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2vw;
+        width: 80vw;
+        margin-top: 6vh;
+        margin-left: 20vw;
+        /* background-color: beige; */
+    }
+
+    .faq-item {
+        width: 30vw;
+        margin-bottom: 4vh;
+    }
+
+    .faq-answer {
+        width: 25vw;
+        font-size: 1.3vw;
+    }
+
+    .faq-button {
+        width: 25vw;
+        margin-left: 37vw;
+    }
+}
+
+/* 휴대폰 (767px 이하) */
+@media screen and (max-width: 767px) {
+    .faq-container {
+        width: 100vw;
+        margin: 0 auto;
+    }
+
+    .faq-title {
+        font-size: 4vw;
+        text-align: center;
+    }
+
+    .faq-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5vw;
+        width: 90vw;
+        margin-top: 8vh;
+        margin-left: 5vw;
+    }
+
+    .faq-item {
+        width: 90vw;
+        margin-bottom: 5vh;
+    }
+
+    .faq-answer {
+        width: 80vw;
+        font-size: 3vw;
+    }
+
+    .faq-button {
+        width: 40vw;
+        margin-left: 30vw;
+
+    }
+
+    .faq-close-icon, .faq-open-icon {
+      width: 3.5vw;
+  }
+}
+
+
+

@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import "./Footer.css";
-
+    
 
 const Footer = () => {
   
   return (
+
     <div className='footer'>
-      <p>Contact dmu_dasom@naver.com</p><br />
-      <p>___</p>
+      <p className='ft'>Contact dasom_2024@naver.com</p>
+      <p className='ft'>___</p>
       <div className='copy'>
-      <p>© 2024 Dasom. ALL RIGHTS RESERVED.</p>
+      <p className='ft'>© 2024 Dasom. ALL RIGHTS RESERVED.</p>
       </div>
       
     </div>
@@ -17,4 +18,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
 

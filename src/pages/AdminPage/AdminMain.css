@@ -1,0 +1,16 @@
+.adminmain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
+}
+
+.admin-recurit{
+    margin-top: 300px;
+    font-size: 30px;
+}
+
+.admin-recurit-plan{
+    margin-top: 100px;
+    font-size: 30px;
+}

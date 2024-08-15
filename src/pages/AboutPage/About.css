@@ -1,10 +1,3 @@
-/* #wrap{
-    @media screen { min-width: 786px;   
-    }
-    
-    @media screen { max-width: 1132px;
-    }
-} */
 
 .about-contentbox1{
     margin-left: 21.7%;
@@ -97,12 +90,172 @@
     
 }
 
+.profile-container1 {
+  margin-left: 21.7%;
+  margin-right: 49%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 4%;
+  width: 100%;
+}
+
+/* right-part*/
+
+.profile-container-right{
+  margin-left: 50%;   
+
+}
+
+.profile-suhyun-lead-container{
+  margin-left: 21.7%;
+  margin-right: 49%;
+  display: flex;
+  flex-direction: row;
+  margin-top: 7%;
+  width: 100%;
+}
+
+.profile-suhyun-image-right{
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%; /* 원형으로 만들기 */
+  background-image: url('../../iamges/member-profile/suhyunProfile.jpeg'); /* 이미지 URL */
+  background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+  background-position: center; /* 이미지 가운데 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  margin-left: 30%;
+}
+
+/*yewon*/
+.profile-yewon-image-right{
+  
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%; /* 원형으로 만들기 */
+  background-image: url('../../iamges/member-profile/yewon.JPG'); /* 이미지 URL */
+  background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+  background-position: center; /* 이미지 가운데 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  margin-left: 38%;
+  margin-top: 2%;
+}
+
+
+.profile-yewon-coment-right{
+    flex-direction: column;
+    position: absolute;
+    margin-left: -17%;
+    margin-top: -8%;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 4%;
+    
+}
+
+.member-yewon-info-right{
+  margin-left: 70%;
+  font-size: 1.25vw;    
+  font-weight: bold;
+  margin-bottom: 1vw;
+  
+}
+
+.member-yewon-coment{
+  font-size: 1.25vw;    
+  color: #000000;
+}
+/*yewon*/
+
+/*taewoo*/
+.profile-taewoo-image-right{
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%; /* 원형으로 만들기 */
+  background-image: url('../../iamges/member-profile/taewoo.png'); /* 이미지 URL */
+  background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+  background-position: center; /* 이미지 가운데 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  margin-left: 38%;
+  margin-top: 2%;
+}
+
+
+.profile-taewoo-coment-right{
+  flex-direction: column;
+  position: absolute;
+  margin-left: -15%;
+  margin-top: -8%;
+  background-color: #EEEEEE;
+  border-radius: 30px;
+  padding: 4%;
+    
+}
+
+.member-taewoo-info-right{
+  margin-left: 65%;
+  font-size: 1.25vw;    
+  font-weight: bold;
+  margin-bottom: 1vw;
+  
+}
+
+.member-taewoo-coment{
+  font-size: 1.25vw;    
+  color: #000000;
+}
+/*taewoo*/
+
+.profile-seongwan-image-right{
+  
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%; /* 원형으로 만들기 */
+  background-image: url('../../iamges/member-profile/seonghwan2.jpeg'); /* 이미지 URL */
+  background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+  background-position: center; /* 이미지 가운데 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  margin-left: 38%;
+  margin-top: 2%;
+}
+
+
+.profile-seongwan-coment-right{
+    flex-direction: column;
+    position: absolute;
+    margin-left: -15%;
+    margin-top: -8%;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 4%;
+    
+}
+
+.member-seongwan-info-right{
+  margin-left: 55%;
+  font-size: 1.25vw;    
+  font-weight: bold;
+  margin-bottom: 1vw;
+  
+}
+
+.member-seongwan-coment-right{
+  font-size: 1.25vw;    
+  color: #000000;
+}
+
+/* right-part*/
+
 .member-lead{
     width: 12.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
     height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
     border-radius: 25px;
     border: none;
-    font-size: 1.2vw
+    font-size: 1.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
    
 }
 
@@ -114,16 +267,21 @@
 }
 
 
-.member-core, .member-back, .member-front{
+.member-design, .member-back, .member-front{
     margin-left: 3.22%;
     width: 12.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
     height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
     border-radius: 25px;
     border: none;
-    font-size: 1.2vw
+    font-size: 1.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
 }
 
-.member-core:hover {
+.member-design:hover {
     background-color: #444CFF;
     cursor: pointer;
     color: white;
@@ -143,7 +301,9 @@
     font-weight: bold;
 }
 
-.profile-container1 {
+
+
+  .profile-lead-container {
     margin-left: 21.7%;
     margin-right: 49%;
     display: flex;
@@ -156,14 +316,238 @@
   .profile-image {
     width: 10vw;
     height: 10vw;
-    border-radius: 50px; /* 원형으로 만들기 */
+    border-radius: 50%; /* 원형으로 만들기 */
     background-image: url('../../iamges/member-profile/yewon.JPG'); /* 이미지 URL */
     background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
     background-position: center; /* 이미지 가운데 정렬 */
     background-repeat: no-repeat; /* 이미지 반복 방지 */
     margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
   }
+
+  .profile-lead-image {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/hosung2.JPG'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  }
+
+
+  /*수현*/
+  .profile-suhyun-container {
+    margin-left: 21.7%;
+    margin-right: 49%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+    width: 100%;
+  }
+  .profile-suhyun-image {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/suhyunProfile.jpeg'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  }
+  .member-suhyun-info {
+    font-size: 1.25vw;    
+    font-weight: bold;
+    margin-bottom: 1vw; /* 텍스트와 다른 요소 사이의 간격 */
+  }
+
+  .profile-suhyun-coment{
+    flex-direction: column;
+    margin-left: 3%;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 4%;
+  }
   
+  .member-suhyun-coment {
+    font-size: 1.25vw;    
+    color: #000000; 
+  }
+  /*수현*/
+
+  /*sunghwan*/
+  .profile-sunghwan-container {
+    margin-left: 21.7%;
+    margin-right: 49%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 7.5%;
+    width: 100%;
+  }
+  .profile-sunghwan-image {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/sunghwan.png'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  }
+  .member-sunghwan-info {
+    font-size: 1.25vw;    
+    font-weight: bold;
+    margin-bottom: 1vw; /* 텍스트와 다른 요소 사이의 간격 */
+  }
+
+  .profile-sunghwan-coment{
+    flex-direction: column;
+    margin-left: 3%;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 4%;
+  }
+  
+  .member-sunghwan-coment {
+    font-size: 1.25vw;    
+    color: #000000; 
+  }
+  /*sunghwan*/
+
+  /*sunjung*/
+  .profile-sunjung-container {
+    margin-left: 21.7%;
+    margin-right: 49%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 7.5%;
+    width: 100%;
+  }
+  .profile-sunjung-image {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/sunjung.jpeg'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  }
+  .member-sunjung-info {
+    font-size: 1.25vw;    
+    font-weight: bold;
+    margin-bottom: 1vw; /* 텍스트와 다른 요소 사이의 간격 */
+  }
+
+  .profile-sunjung-coment{
+    flex-direction: column;
+    margin-left: 3%;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 4%;
+  }
+  
+  .member-sunjung-coment {
+    font-size: 1.25vw;    
+    color: #000000; 
+  }
+  /*sunjung*/
+
+  /*seongwan*/
+
+  .profile-seongwan-image{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/seonghwan2.jpeg'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  }
+  /*seongwan*/
+
+
+  /*junyoung*/
+
+  /* .profile-container-junyoung-right{
+    margin-left: 48%;   
+
+  } */
+
+  .profile-junyoung-image-right{
+  
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/junyoung.png'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-left: 38%;
+    margin-top: 2%;
+  }
+  
+  
+  .profile-junyoung-coment-right{
+      flex-direction: column;
+      position: absolute;
+      margin-left: -13%;
+      margin-top: -8%;
+      background-color: #EEEEEE;
+      border-radius: 30px;
+      padding: 4%;
+      
+  }
+  
+  .member-junyoung-info-right{
+    margin-left: 64%;
+    font-size: 1.25vw;    
+    font-weight: bold;
+    margin-bottom: 1vw;
+    
+  }
+  
+  .member-junyoung-coment{
+    font-size: 1.25vw;    
+    color: #000000;
+  }
+  /*junyoung*/
+
+  /*younjae*/
+  .profile-younjae-container {
+    margin-left: 21.7%;
+    margin-right: 49%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 7.5%;
+    width: 100%;
+  }
+
+  .profile-younjae-image{
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../iamges/member-profile/yunjae.jpeg'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+    margin-bottom: 2vw; /* 이미지와 다른 요소 사이의 간격 */
+  }
+
+ .profile-yejin-image-right{
+  
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%; /* 원형으로 만들기 */
+  background-image: url('../../iamges/member-profile/yejin.jpeg'); /* 이미지 URL */
+  background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+  background-position: center; /* 이미지 가운데 정렬 */
+  background-repeat: no-repeat; /* 이미지 반복 방지 */
+  margin-left: 38%;
+  margin-top: 2%;
+}
+
   .member-info {
     font-size: 1.25vw;    
     font-weight: bold;
@@ -173,7 +557,9 @@
   .profile-coment{
     flex-direction: column;
     margin-left: 3%;
-    margin-top: 3%;
+    background-color: #EEEEEE;
+    border-radius: 30px;
+    padding: 4%;
   }
   
   .member-coment {
