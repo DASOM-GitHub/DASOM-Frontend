@@ -171,7 +171,7 @@ body{
     .faq-answer {
       padding: 3vh 1.5vw 1.5vh 3vw; 
       line-height: 2.5vh; 
-      border: 0.1vw solid #ccc; 
+      border: 0.1vw solid #fafafa; 
       border-radius: 0.6vw; 
       border-top: none;
       background: #fafafa;

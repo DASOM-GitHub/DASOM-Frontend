@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Recruit.css";
+// import "./Recruit.css";
+import "./Recruit2.css";
+import Footer from "../../components/Footer";
+
 
 const Recruit = () => {
   return (

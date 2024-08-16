@@ -586,7 +586,7 @@
     justify-content: center;
     align-items: center;
     display: flex;
-    background-color: #F5F5F5;
+    background-color: #eeeeee;
     border-radius: 10px;
     width: 55vw; /* 너비를 뷰포트 너비의 비율로 설정 */
     height: 30vh; /* 높이를 뷰포트 높이의 비율로 설정 */
