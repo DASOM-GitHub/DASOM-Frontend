@@ -31,14 +31,14 @@ const Apply = () => {
       inputName,
       "학번 : ",
       studentId,
-      "연락처 : ",
-      tel,
-      "지원동기 : ",
-      motivation,
       "학년 : ",
       Grade,
       "학과 : ",
-      Department
+      Department,
+      "연락처 : ",
+      tel,
+      "지원동기 : ",
+      motivation
     );
     navigate("/ApplySuccess");
   };
