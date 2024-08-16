@@ -2,6 +2,7 @@ import "./App.css";
 import { BrowserRouter as Router, Outlet, Route, Routes, useLocation } from "react-router-dom";
 import { AppProvider } from "./contexts/AppContext";
 import Main from "./pages/MainPage/Main";
+import MainHeader from "./components/MainHeader";
 import Header from "./components/Header";
 // import Footer from "./components/Footer";
 import About from './pages/AboutPage/About';
@@ -21,7 +22,11 @@ const Layout = () => {
 
   return (
     <div>
-      {showHeaderPaths.includes(location.pathname) && <Header />}
+      {location.pathname === "/" || location.pathname === "/main" || location.pathname === "/Main"
+        ? <MainHeader />
+        : showHeaderPaths.includes(location.pathname) 
+        ? <Header />
+        : null}
       <Outlet />
     </div>
   );
