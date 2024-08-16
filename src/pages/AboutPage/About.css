@@ -259,6 +259,13 @@
    
 }
 
+.member-box .active {
+  background-color: #444CFF;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
 .member-lead:hover {
     background-color: #444CFF;
     cursor: pointer;

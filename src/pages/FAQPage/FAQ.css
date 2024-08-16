@@ -105,7 +105,7 @@ body{
 }
 
 .faq-answer {
-  padding: 3vh 1.5vw 1.5vh 3vw;
+  padding: 3vh 1.5vw 1.5vh 3vw; 
   line-height: 2.5vh;
   border: 0.1vw solid #ccc;
   border-radius: 0.8vw;
@@ -228,7 +228,9 @@ body{
 
     .faq-answer {
         width: 26vw;
-        font-size: 1.2vw;
+        font-size: 1vw; 
+        border: 0.1vw solid #fafafa; 
+        padding: 1.5vw 1.5vh ;
     }
 
     .faq-button {
@@ -266,7 +268,9 @@ body{
 
     .faq-answer {
         width: 25vw;
-        font-size: 1.3vw;
+        font-size: 1vw; 
+        padding: 1.5vw 1.5vh ;
+        border: 0.1vw solid #fafafa; 
     }
 
     .faq-button {
@@ -303,7 +307,10 @@ body{
 
     .faq-answer {
         width: 80vw;
-        font-size: 3vw;
+        padding: 1.5vw 1.5vh ;
+        border-radius: 2%;
+        font-size: 2vw;
+        border: 0.1vw solid #fafafa; 
     }
 
     .faq-button {

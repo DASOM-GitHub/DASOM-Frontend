@@ -125,6 +125,16 @@
     border-radius: 50%;
 }
 
+.main-2pageImg{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%; /* 원형으로 만들기 */
+    background-image: url('../../../public/main_img/main-image.png'); /* 이미지 URL */
+    background-size: cover; /* 이미지가 컨테이너를 덮도록 설정 */
+    background-position: center; /* 이미지 가운데 정렬 */
+    background-repeat: no-repeat; /* 이미지 반복 방지 */
+}
+
 /* 3page */
 .main-3page{
     width: 100%;

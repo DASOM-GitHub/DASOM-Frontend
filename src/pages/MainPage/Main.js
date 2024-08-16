@@ -10,6 +10,7 @@ import Footer from '../../components/Footer';
 import { useNavigate } from 'react-router-dom';
 
 
+
 const Main = () => {
 
   const [ref, inView] = useInView({
@@ -65,7 +66,7 @@ const Main = () => {
         <div className='main'>
           <div className='main-1page'>
             <div className='main-1pageImg'>
-              <img src={`${process.env.PUBLIC_URL}/main_img/main-image.png`}/>
+              <img src={`${process.env.PUBLIC_URL}/main_img/dasomlogo.png`}/>
             </div>
             <div className='main-title-box'>
               <div className='main-title'>
@@ -107,7 +108,7 @@ const Main = () => {
                 </div>
               </div>
               <div className='main-2pageImg'>
-                <image className='main-2-image'></image>
+                
               </div>
             </div>
           </div>

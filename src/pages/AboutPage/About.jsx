@@ -150,23 +150,37 @@ const About = () => {
       <div className='member'>
         <div className='member-title'>MAKERS</div>
         <div>
-            <div className='member-box'>
-                <div className='member-lead' onClick={() => setSelectedComponent('lead')}>LEAD</div>
-                <div className='member-front' onClick={() => setSelectedComponent('front')}>FRONT</div>
-                <div className='member-back' onClick={() => setSelectedComponent('back')}>BACK</div>
-                <div className='member-design' onClick={() => setSelectedComponent('design')}>DESIGN</div>
-            </div>
+        <div className='member-box'>
+    <div
+        className={`member-lead ${selectedComponent === 'lead' ? 'active' : ''}`}
+        onClick={() => setSelectedComponent('lead')}
+    >
+        LEAD
+    </div>
+    <div
+        className={`member-front ${selectedComponent === 'front' ? 'active' : ''}`}
+        onClick={() => setSelectedComponent('front')}
+    >
+        FRONT
+    </div>
+    <div
+        className={`member-back ${selectedComponent === 'back' ? 'active' : ''}`}
+        onClick={() => setSelectedComponent('back')}
+    >
+        BACK
+    </div>
+    <div
+        className={`member-design ${selectedComponent === 'design' ? 'active' : ''}`}
+        onClick={() => setSelectedComponent('design')}
+    >
+        DESIGN
+    </div>
+</div>
+
             <div className='content'>
                 {renderComponent()}
             </div>
         </div>
-        {/* <div className='profile-container1'>
-        <div className='profile-image'></div>
-        <div className='profile-coment'>
-        <div className='member-info'>이예원 / 2학년</div>
-        <div className='member-coment'>안녕하세요. 다솜 메이커스 프론트앤드를 맡고 있습니다.</div>
-        </div>
-        </div> */}
         </div>
         <div className='activity'>
           <div className='activity-title'>ACTIVITY</div>
