@@ -7,7 +7,7 @@ const AdminMain = () => {
 
   return (
     <div className='adminmain'>
-   <Link to='/admin-recurit' className='admin-recurit'><div>지원자 관리하기</div></Link>
+   <Link to='/AdminRecruit' className='admin-recurit'><div>지원자 관리하기</div></Link>
    <Link to='/admin-recurit-plan' className='admin-recurit-plan'><div>지원일정 관리하기</div></Link>
     </div>
   );

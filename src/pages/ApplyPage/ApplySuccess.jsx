@@ -13,7 +13,7 @@ const ApplySuccess = () => {
         <br />
         감사합니다.
       </p>
-      <Link className="AS-back" to={"/main"}>
+      <Link className="AS-back" to="/main">
         돌아가기
         <br />
       </Link>
