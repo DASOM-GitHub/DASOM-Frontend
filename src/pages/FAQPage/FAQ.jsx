@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import OPENICON from '../../iamges/icon/faq-open-icon.png'; 
 import CLOSEICON from '../../iamges/icon/faq-close-icon.png';
 import "./FAQ.css";
+import { Link } from "react-router-dom";
 
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
@@ -50,8 +51,11 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-
-      <button className="faq-button">아직 궁금한 점이 있다면 →</button>
+      <div className="center-button">
+        <Link to='https://www.instagram.com/dasom___official/' className="recruit-button">
+          아직 궁금한 점이 있다면 →
+        </Link>
+      </div>
       </div>
       
   );
