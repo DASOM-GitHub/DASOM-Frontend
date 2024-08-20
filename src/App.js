@@ -12,6 +12,7 @@ import ApplySuccess from './pages/ApplyPage/ApplySuccess';
 import FAQ from './pages/FAQPage/FAQ';
 import Admin from './pages/AdminPage/Admin';
 import AdminMain from './pages/AdminPage/AdminMain';
+import AdminRecruitPlan from './pages/AdminPage/AdminRecruitPlan';
 import ScrollToTop from "./components/ScrollToTop";
 
 const Layout = () => {
@@ -49,6 +50,7 @@ function App() {
               <Route path="faq" element={<FAQ />} />
               <Route path="admin" element={<Admin />} />
               <Route path="adminmain" element={<AdminMain />} />
+              <Route path="admin-recruit-plan" element={<AdminRecruitPlan />} />
             </Route>
           </Routes>
         </Router>
