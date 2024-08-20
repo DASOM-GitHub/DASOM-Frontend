@@ -3,6 +3,20 @@ import React, { useState, useEffect } from "react";
 const AdminRecruit = () => {
   const [applicant, setApplicants] = useState([]);
 
+  /*
+  const test = [
+    {
+      id: 1,
+      name: "AAA",
+      grade: "2학년",
+      department: "컴퓨터소프트웨어공학과",
+      tel: "010-1111-1111",
+      motivation: "abcdefg",
+      status: "",
+    },
+  ];
+  */
+
   useEffect(() => {
     fetch("/api/service")
       .then((response) => response.json())
