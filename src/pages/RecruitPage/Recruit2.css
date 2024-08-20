@@ -34,11 +34,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 10vh; 100px을 viewport height의 10%로 변환 */
+    /* height: 10vh;  */
+    margin-bottom: 30%;
+
+
 }
 
 .recruit-button {
-    margin-top: 20%;
+    margin-top: 10%;
     width: 16.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
     height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
     border-radius: 25px;
@@ -51,6 +54,6 @@
     border: 1px solid #444cff;
     background-color: #444cff;
     text-decoration: none;
-    margin-bottom: 20%;
+    /* margin-bottom: 50%; */
 
 }

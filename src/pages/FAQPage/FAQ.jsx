@@ -82,10 +82,10 @@ const FAQ = () => {
           </div>
         ))}
       </div>
-      <div className="center-button">
+      <div className="faq-center-button">
         <Link
           to="https://www.instagram.com/dasom___official/"
-          className="recruit-button"
+          className="faq-recruit-button"
         >
           아직 궁금한 점이 있다면 →
         </Link>
