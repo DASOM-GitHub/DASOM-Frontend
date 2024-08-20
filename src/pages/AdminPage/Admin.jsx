@@ -13,7 +13,9 @@ const Admin = () => {
         const navigate = useNavigate();
       
 
-          const handleSubmit = async () => {
+          const handleSubmit = async (e) => {
+            e.preventDefault();
+            console.log('handleSubmit called');
               try {
                 const response = await axios.post('https://dmu-dasom.or.kr/auth/login', {
                       email : email,
@@ -23,10 +25,10 @@ const Admin = () => {
                 if (response.request.status === 200 ) {
                 console.log(response.status)
                   console.log('로그인 성공');
-                   localStorage.setItem("accessToken", response.data.data.accessToken);
+                   localStorage.setItem("accessToken", response.data.access_token);
                    
                    console.log(response.request.status)
-                  navigate('AapplySuccess');
+                  navigate('adminmain');
                 }
               } catch (error) {
                 if (error.response && error.response.status === 200) {

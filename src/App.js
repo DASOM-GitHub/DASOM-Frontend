@@ -49,8 +49,8 @@ function App() {
               <Route path="applysuccess" element={<ApplySuccess />} />
               <Route path="faq" element={<FAQ />} />
               <Route path="admin" element={<Admin />} />
-              <Route path="adminmain" element={<AdminMain />} />
-              <Route path="admin-recruit-plan" element={<AdminRecruitPlan />} />
+              <Route path="admin/adminmain" element={<AdminMain />} />
+              <Route path="admin/admin-recruit-plan" element={<AdminRecruitPlan />} />
             </Route>
           </Routes>
         </Router>
