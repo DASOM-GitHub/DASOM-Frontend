@@ -13,6 +13,7 @@ import FAQ from './pages/FAQPage/FAQ';
 import Admin from './pages/AdminPage/Admin';
 import AdminMain from './pages/AdminPage/AdminMain';
 import AdminRecruitPlan from './pages/AdminPage/AdminRecruitPlan';
+import AdminRecruit from "./pages/AdminPage/AdminRecruit";
 import ScrollToTop from "./components/ScrollToTop";
 
 const Layout = () => {
@@ -25,9 +26,9 @@ const Layout = () => {
     <div>
       {location.pathname === "/" || location.pathname === "/main" || location.pathname === "/Main"
         ? <MainHeader />
-        : showHeaderPaths.includes(location.pathname) 
+      : showHeaderPaths.includes(location.pathname) 
         ? <Header />
-        : null}
+      : null}
       <Outlet />
     </div>
   );
@@ -38,7 +39,7 @@ function App() {
     <div className="app">
       <AppProvider>
         <Router>
-        <ScrollToTop />
+          <ScrollToTop />
           <Routes>
             <Route element={<Layout />}>
               <Route path="/" element={<Main />} />
@@ -49,8 +50,10 @@ function App() {
               <Route path="applysuccess" element={<ApplySuccess />} />
               <Route path="faq" element={<FAQ />} />
               <Route path="admin" element={<Admin />} />
-              <Route path="admin/adminmain" element={<AdminMain />} />
-              <Route path="admin/admin-recruit-plan" element={<AdminRecruitPlan />} />
+              <Route path="adminmain" element={<AdminMain />} />
+              <Route path="admin-recruit-plan" element={<AdminRecruitPlan />} />
+              <Route path="admin-recruit" element={<AdminRecruit />} />
+
             </Route>
           </Routes>
         </Router>

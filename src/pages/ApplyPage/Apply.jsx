@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from "react";
 import "./Apply.css";
+import { Link, useNavigate } from "react-router-dom";
 
 const Apply = () => {
   const [inputName, setInputName] = useState("");
@@ -9,6 +10,8 @@ const Apply = () => {
   const [Grade, setGrade] = useState();
   const [Department, setDepartment] = useState();
   const textRef = useRef();
+
+  const navigate = useNavigate();
 
   const textResize = useCallback(() => {
     if (textRef.current) {
@@ -21,13 +24,32 @@ const Apply = () => {
     setter(e.target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(
+      "이름 : ",
+      inputName,
+      "학번 : ",
+      studentId,
+      "학년 : ",
+      Grade,
+      "학과 : ",
+      Department,
+      "연락처 : ",
+      tel,
+      "지원동기 : ",
+      motivation
+    );
+    navigate("/ApplySuccess");
+  };
+
   const isFormComplete =
     inputName && studentId && tel && motivation && Grade && Department;
 
   return (
     <div className="apply-main">
       <div className="apply-title">지원하기</div>
-      <div className="apply-ques-box">
+      <form className="apply-ques-box" onSubmit={handleSubmit}>
         <input
           className="apply-input-text"
           name="name"
@@ -103,7 +125,7 @@ const Apply = () => {
           value="지원하기"
           disabled={!isFormComplete}
         ></input>
-      </div>
+      </form>
     </div>
   );
 };
