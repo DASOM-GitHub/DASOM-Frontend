@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "./Main.css";
+import "./Main.css" ;
 import styled from "styled-components"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import CountUp from "react-countup";
 import { useInView } from 'react-intersection-observer';
 import Footer from '../../components/Footer';
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -18,6 +19,13 @@ const Main = () => {
   });
 
   const sliderRef = useRef(null);
+
+  const [slides, setSlides] = useState([
+    { imgSrc: 'main_img/2024MT.png', altText: 'MT 사진', caption: 'MT' },
+    { imgSrc: 'main_img/2024HAKATON.png', altText: 'HAKATON 사진', caption: 'HAKATON' },
+    { imgSrc: 'main_img/2024MT.png', altText: 'Slide 3 사진', caption: 'Slide 3' },
+    { imgSrc: 'main_img/2024MT.png', altText: 'Slide 4 사진', caption: 'Slide 4' }
+  ]);
 
   const settings = {
     dots: true,
@@ -37,18 +45,35 @@ const Main = () => {
     )
   };
 
+  const navigate = useNavigate(); 
+  const handleAboutNavigation = () => {
+    navigate('/about');
+  };
+  const handleApplyNavigation = () => {
+    navigate('/recruit');
+  };
+
+  // useEffect(() => {
+  //   fetch('/api/slides')
+  //     .then(response => response.json())
+  //     .then(data => setSlides(data))
+  //     .catch(error => console.error('Error fetching slides:', error));
+  // }, []);
+
   return (
     <Container>
       <div>
         <div className='main'>
           <div className='main-1page'>
-            <div className='main-1pageImg'></div>
+            <div className='main-1pageImg'>
+              <img src={`${process.env.PUBLIC_URL}/main_img/dasomlogo.png`}/>
+            </div>
             <div className='main-title-box'>
               <div className='main-title'>
                 <p>컴퓨터소프트웨어학과</p>
                 <p>전공동아리 DASOM</p>
               </div>
-              <div className='main-subtitle'>
+              <div className='main-subtitle' onClick={handleApplyNavigation}>
                 34기 지원하기
                 <img className='main-applybtn' src={`${process.env.PUBLIC_URL}/main_img/arrow.png`} alt=">"/>
               </div>
@@ -68,22 +93,22 @@ const Main = () => {
                   </div>
                 </div>
                 <div className='main-2-2box'>
-                  <div className='main-1box-title'>발표를 통해 지식을 공유해요.</div>
+                  <div className='main-1box-title'>함께 도전하고 성취해요.</div>
                   <div className='main-1box-subtitle'>
-                    <p>다양한 스터디에 참가하고</p>
-                    <p>같은 목표를 향해 달려나가요.</p>
+                    <p>다양한 프로젝트에 참여하며 실력을 키워요.</p>
+                    <p>공동의 목표를 이루기 위해 협력해요.</p>
                   </div>
                 </div>
                 <div className='main-2-3box'>
                   <div className='main-1box-title'>함께 배우고 성장해요.</div>
                   <div className='main-1box-subtitle'>
-                    <p>생생한 경험과 유익한 지식을 서로 나눠요.</p>
-                    <p>다양한 주제로 토론해요.</p>
+                    <p>다양한 스터디에 참가하고</p>
+                    <p>같은 목표를 향해 달려나가요.</p>
                   </div>
                 </div>
               </div>
               <div className='main-2pageImg'>
-                <image className='main-2-image'></image>
+                
               </div>
             </div>
           </div>
@@ -135,36 +160,20 @@ const Main = () => {
           <div className='main-5page'>
             <div className='main-5-title'>
               <p>ABOUT</p>
-              <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt=">"/>
+              <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt=">" onClick={handleAboutNavigation}/>
             </div>
             <div className='main-5-slider'>
               <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-left.png`} alt='prev'
               onClick={() => sliderRef.current.slickPrev()} className="main-5-prev-button"/>
               <Slider ref={sliderRef} {...settings}>
-                <div className='main-5-slider-box'>
-                  <div className='main-5-slider-img'>
-                    <img src={`${process.env.PUBLIC_URL}/main_img/2024MT.png`} alt='MT사진'/>
-                    <p>MT</p>
+                {slides.map((slide, index) => (
+                  <div key={index} className='main-5-slider-box'>
+                    <div className='main-5-slider-img'>
+                      <img src={`${process.env.PUBLIC_URL}/${slide.imgSrc}`} alt={slide.altText} />
+                      <p>{slide.caption}</p>
+                    </div>
                   </div>
-                </div>
-                <div className='main-5-slider-box'>
-                  <div className='main-5-slider-img'>
-                    <img src={`${process.env.PUBLIC_URL}/main_img/2024HAKATON.png`} alt='HAKATON사진'/>
-                    <p>HAKATON</p>
-                  </div>
-                </div>
-                <div className='main-5-slider-box'>
-                  <div className='main-5-slider-img'>
-                    <img src={`${process.env.PUBLIC_URL}/main_img/2024MT.png`} alt='MT사진'/>
-                    <p>Slide 3</p>
-                  </div>
-                </div>
-                <div className='main-5-slider-box'>
-                  <div className='main-5-slider-img'>
-                    <img src={`${process.env.PUBLIC_URL}/main_img/2024MT.png`} alt='MT사진'/>
-                    <p>Slide 4</p>
-                  </div>
-                </div>
+                ))}
               </Slider>
               <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt='next'
               onClick={() => sliderRef.current.slickNext()} className="main-5-next-button"/>
@@ -176,7 +185,7 @@ const Main = () => {
               <p className='main-6-smalltitle'>모두와 함께 새로운 경험을 만드는 이곳</p>
               <p className='main-6-bigtitle'>DASOM에 지금 합류하세요</p>
             </div>
-            <div className='main-6-applybox'>
+            <div className='main-6-applybox' onClick={handleApplyNavigation}>
               <p>지원하기</p>
               <img src={`${process.env.PUBLIC_URL}/main_img/arrow.png`} alt=">"/>
             </div>

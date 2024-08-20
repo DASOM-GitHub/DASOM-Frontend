@@ -8,12 +8,13 @@ import github from "../iamges/logo/github.png";
 const Header = () => {
   
   return (
-    <header className="header">
+  <header className="header">
 
     <nav className="container">
 
       <div className='logo'>
-        <img src={logo} alt='logo' />
+        <a href='Main'>
+        <img src={logo} alt='logo' /></a>
       </div>
 
         <ul className='menu'>
@@ -27,10 +28,8 @@ const Header = () => {
           <li><a href='https://www.instagram.com/dasom___official/'><img src={insta} alt='logo' /></a></li>
         </ul>
 
-      
-      
     </nav>
-    </header>
+  </header>
   );
 };
 
