@@ -1,50 +1,52 @@
 .admin-login-form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .admin-login-title {
-    font-size: 64px;
-    margin-top: 160px;
+  font-size: 64px;
+  margin-top: 160px;
 }
 
-.login-id,.login-pw{
-    letter-spacing:3px;
-    margin-top: 100px;
-    appearance: none;
-    background-color: #F5F5F5;
-    width: 550px;
-    height: 77px;
-    border:2px solid ;
-    border-radius: 25px;
-    padding-left: 30px;
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
+.login-id,
+.login-pw {
+  letter-spacing: 3px;
+  margin-top: 100px;
+  appearance: none;
+  background-color: #f5f5f5;
+  width: 550px;
+  height: 77px;
+  border: 2px solid;
+  border-radius: 25px;
+  padding-left: 30px;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-.login-button{
-    letter-spacing:3px;
-    margin-top: 100px;
-    appearance: none;
-    background-color: #F5F5F5;
-    width: 580px;
-    height: 77px;
-    border:2px solid ;
-    border-radius: 25px;
-    padding-left: 30px;
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
+.login-button {
+  letter-spacing: 3px;
+  margin-top: 100px;
+  appearance: none;
+  background-color: #f5f5f5;
+  width: 580px;
+  height: 77px;
+  border: 2px solid;
+  border-radius: 25px;
+  padding-left: 30px;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 100px;
 }
 
-.login-button:hover{
-    background-color: #444CFF;
-    border-color: #444CFF;
-    color: #ffffff;
-    cursor: pointer;
-    transition: border-color 0.3s, color 0.3s;;
-    transition: background-color 0.3s, color 0.3s;;
+.login-button:hover {
+  background-color: #444cff;
+  border-color: #444cff;
+  color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
 }

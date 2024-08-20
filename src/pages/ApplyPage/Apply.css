@@ -25,6 +25,7 @@
     padding: 2px 15px;
     outline: none;
     margin-top: 80px;
+    background-color: #f5f5f5;
     &:focus {
       border: 2px solid #444cff;
     }
@@ -40,6 +41,8 @@
     word-wrap: break-word;
     resize: none;
     padding: 10px 10px;
+    background-color: #f5f5f5;
+
     &:focus {
       border: 2px solid #444cff;
     }
@@ -72,6 +75,8 @@
     display: flex;
     width: AUTO;
     flex-direction: column;
+    align-items: center;
+
   }
   .apply-submit {
     width: 50%;
@@ -82,6 +87,7 @@
     display: block;
     color: #ffffff;
     cursor: pointer;
+  
 
     &:disabled {
       background: none;
@@ -119,6 +125,8 @@
     padding: 2px 15px;
     outline: none;
     margin-top: 80px;
+    background-color: #f5f5f5;
+
     &:focus {
       border: 2px solid #444cff;
     }
@@ -134,6 +142,8 @@
     word-wrap: break-word;
     resize: none;
     padding: 10px 10px;
+    background-color: #f5f5f5;
+
     &:focus {
       border: 2px solid #444cff;
     }
@@ -166,6 +176,7 @@
     display: flex;
     width: AUTO;
     flex-direction: column;
+    align-items: center;
   }
   .apply-submit {
     width: 50%;
