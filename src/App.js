@@ -15,6 +15,7 @@ import AdminMain from './pages/AdminPage/AdminMain';
 import AdminRecruitPlan from './pages/AdminPage/AdminRecruitPlan';
 import AdminRecruit from "./pages/AdminPage/AdminRecruit";
 import ScrollToTop from "./components/ScrollToTop";
+import PrivateRoute from "./PrivateRoute";
 
 const Layout = () => {
   const location = useLocation();
@@ -50,9 +51,26 @@ function App() {
               <Route path="applysuccess" element={<ApplySuccess />} />
               <Route path="faq" element={<FAQ />} />
               <Route path="admin" element={<Admin />} />
-              <Route path="admin/adminmain" element={<AdminMain />} />
-              <Route path="admin/adminmain/admin-recruit-plan" element={<AdminRecruitPlan />} />
-              <Route path="admin/adminmain/admin-recruit" element={<AdminRecruit />} />
+              <Route path="admin/adminmain" element={
+                <PrivateRoute>
+                <AdminMain />
+                </PrivateRoute>
+              } 
+              />
+
+              <Route path="admin/adminmain/admin-recruit-plan" element={
+                <PrivateRoute>
+                <AdminRecruitPlan />
+                </PrivateRoute>
+              } 
+              />
+
+              <Route path="admin/adminmain/admin-recruit" element={
+                <PrivateRoute>
+                <AdminRecruit />
+                </PrivateRoute>
+              } 
+              />
 
             </Route>
           </Routes>
