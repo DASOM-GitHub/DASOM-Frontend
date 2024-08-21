@@ -53,6 +53,7 @@ function App() {
               <Route path="adminmain" element={<AdminMain />} />
               <Route path="admin-recruit-plan" element={<AdminRecruitPlan />} />
               <Route path="admin-recruit" element={<AdminRecruit />} />
+
             </Route>
           </Routes>
         </Router>
