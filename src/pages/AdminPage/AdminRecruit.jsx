@@ -1,90 +1,101 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import * as XLSX from "xlsx";
+import "./AdminRecruit.css";
 
 const AdminRecruit = () => {
-  const [applicant, setApplicants] = useState([]);
+  const [info, setInfo] = useState([]);
 
-  /*
-  const test = [
-    {
-      id: 1,
-      name: "AAA",
-      grade: "2학년",
-      department: "컴퓨터소프트웨어공학과",
-      tel: "010-1111-1111",
-      motivation: "abcdefg",
-      status: "",
-    },
-  ];
-  */
+  const fetchPosts = async () => {
+    try {
+      const response = await axios.get("api/service");
+      const resData = await response.data;
+      setInfo(resData);
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   useEffect(() => {
-    fetch("/api/service")
-      .then((response) => response.json())
-      .then((data) => setApplicants(data))
-      .catch((error) => console.error("Error fetching applicants:", error));
+    fetchPosts();
   }, []);
 
-  const handleDelete = (id) => {
-    fetch(`/api/service/${id}`, { method: "DELETE" }).then((response) => {
-      if (response.ok) {
-        setApplicants(applicant.filter((applicant) => applicant.id !== id));
-      } else {
-        console.error("Error deleting applicant");
+  const handleDelete = async (studentId) => {
+    try {
+      const response = await axios.delete(`api/service/${studentId}`);
+      if (response.status === 200) {
+        setInfo(info.filter((info) => info.studentId !== studentId));
       }
-    });
+    } catch (error) {
+      console.error("Error Delete : ", error);
+    }
   };
 
-  const handleStatusChange = (id, status) => {
-    fetch(`/api/service/${id}`, {
-      method: "PATCH",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ status }),
-    }).then((response) => {
-      if (response.ok) {
-        setApplicants(
-          applicant.map((applicant) =>
-            applicant.id === id ? { ...applicant, status } : applicant
+  const handleStatusChange = async (studentId, status) => {
+    try {
+      const response = await axios.patch(`api/service/${studentId}`, {
+        status: status,
+      });
+      if (response.status === 200) {
+        setInfo(
+          info.map((info) =>
+            info.studentId === studentId ? { ...info, status } : info
           )
         );
-      } else {
-        console.error("Error updating status");
       }
-    });
+    } catch (error) {
+      console.error("Error updating status:", error);
+    }
   };
+
+  const exportToExcel = () => {
+    const worksheet = XLSX.utils.json_to_sheet(info);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Applicants");
+    XLSX.writeFile(workbook, "applicants.xlsx");
+  };
+
   return (
     <div>
-      <table>
-        <thead>
+      <table className="admin-recruit-table">
+        <thead className="admin-recruit-table-thead">
           <tr>
             <th>이름</th>
-            <th>학년</th>
+            <th>이메일</th>
+            <th>연락처</th>
             <th>학과</th>
-            <th>전화번호</th>
+            <th>학년</th>
             <th>지원동기</th>
             <th>합격 / 불합격</th>
             <th>관리</th>
           </tr>
         </thead>
         <tbody>
-          {applicant.map((applicant) => (
-            <tr key={applicant.id}>
-              <td>{applicant.name}</td>
-              <td>{applicant.grade}</td>
-              <td>{applicant.department}</td>
-              <td>{applicant.tel}</td>
-              <td>{applicant.motivation}</td>
-              <td>{applicant.status}</td>
+          {info.map((info) => (
+            <tr key={info.studentId}>
+              <td>{info.applicantName}</td>
+              <td>{info.applicantEmail}</td>
+              <td>{info.applicantContact}</td>
+              <td>{info.applicantDept}</td>
+              <td>{info.applicantGrade}</td>
+              <td>{info.reasonForApply}</td>
+              <td>{info.status}</td>
               <td>
-                <button onClick={() => handleDelete(applicant.id)}>삭제</button>
                 <button
-                  onClick={() => handleStatusChange(applicant.id, "합격")}
+                  className="admin-recruit-button"
+                  onClick={() => handleDelete(info.studentId)}
+                >
+                  삭제
+                </button>
+                <button
+                  className="admin-recruit-button"
+                  onClick={() => handleStatusChange(info.studentId, "합격")}
                 >
                   합격
                 </button>
                 <button
-                  onClick={() => handleStatusChange(applicant.id, "불합격")}
+                  className="admin-recruit-button"
+                  onClick={() => handleStatusChange(info.studentId, "불합격")}
                 >
                   불합격
                 </button>
@@ -93,6 +104,9 @@ const AdminRecruit = () => {
           ))}
         </tbody>
       </table>
+      <button className="admin-recruit-button" onClick={exportToExcel}>
+        엑셀 추출
+      </button>
     </div>
   );
 };
