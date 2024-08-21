@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import "./About.css";
 import Footer from "../../components/Footer";
 
@@ -126,6 +127,14 @@ const About = () => {
         }
     };
 
+    const location = useLocation();
+    const specialSectionRef = useRef(null);
+
+    useEffect(() => {
+      if (location.state?.scrollTo === 'specialSection') {
+        specialSectionRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, [location.state]);
   
 
   return (
@@ -147,7 +156,7 @@ const About = () => {
         <div className='about-subtitle3'>각 분야의 동아리멤버들이 모여 도전적인 목표로 나아갑니다.</div>
         </div>
         </div>
-      <div className='member'>
+      <div className='member' ref={specialSectionRef}>
         <div className='member-title'>MAKERS</div>
         <div>
         <div className='member-box'>
