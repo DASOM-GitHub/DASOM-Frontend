@@ -92,8 +92,10 @@ const AdminRecruitPlan = () => {
         }
   
         console.log(`${key} updated successfully`);
+        alert(`'${getDescription(key)}' 업데이트 되었습니다!`);
       } catch (error) {
         console.error(`Failed to update ${key}:`, error);
+        alert(`'${getDescription(key)}' 업데이트 에러`);
       }
     };
   
@@ -132,6 +134,7 @@ const AdminRecruitPlan = () => {
                 저장
               </Button>
             </Box>
+            <div style={{"height" : "30px"}}/>
             <Box display="flex" alignItems="center" gap={2}>
               <DateTimePicker
                 label="서류 합격 발표"
@@ -143,6 +146,30 @@ const AdminRecruitPlan = () => {
                 저장
               </Button>
             </Box>
+            <div style={{"height" : "30px"}}/>
+            <Box display="flex" alignItems="center" gap={2}>
+              <DateTimePicker
+                label="면접 시작"
+                value={dates.REC_MID_ANNOUNCE}
+                onChange={(newValue) => handleDateChange('REC_MID_ANNOUNCE', newValue)}
+                renderInput={(params) => <TextField {...params} />}
+              />
+              <Button variant="contained" onClick={() => handleSave('REC_MID_ANNOUNCE')}>
+                저장
+              </Button>
+            </Box>
+            <Box display="flex" alignItems="center" gap={2}>
+              <DateTimePicker
+                label="면접 종료"
+                value={dates.REC_MID_ANNOUNCE}
+                onChange={(newValue) => handleDateChange('REC_MID_ANNOUNCE', newValue)}
+                renderInput={(params) => <TextField {...params} />}
+              />
+              <Button variant="contained" onClick={() => handleSave('REC_MID_ANNOUNCE')}>
+                저장
+              </Button>
+            </Box>
+            <div style={{"height" : "30px"}}/>
             <Box display="flex" alignItems="center" gap={2}>
               <DateTimePicker
                 label="최종 합격 발표"
