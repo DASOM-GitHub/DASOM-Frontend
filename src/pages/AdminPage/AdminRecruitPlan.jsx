@@ -17,7 +17,16 @@ const AdminRecruitPlan = () => {
     useEffect(() => {
       const fetchDates = async () => {
         try {
-          const response = await fetch('/api/service');
+          const token = localStorage.getItem('accessToken');
+
+            const response = await fetch('https://dmu-dasom.or.kr/api/service', {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${token}`,
+                }
+            });
+
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
@@ -43,19 +52,39 @@ const AdminRecruitPlan = () => {
         [key]: newValue
       }));
     };
+
+    const getDescription = (key) => {
+      switch (key) {
+          case 'REC_OPEN':
+              return '모집 시작';
+          case 'REC_CLOSE':
+              return '지원 종료';
+          case 'REC_MID_ANNOUNCE':
+              return '서류 합격 발표';
+          case 'REC_FINAL_ANNOUNCE':
+              return '최종 합격 발표';
+          default:
+              return '';
+      }
+  };
   
     const handleSave = async (key) => {
-      const formattedDate = {
-        value: dates[key].format('YYYY-MM-DD HH:mm:ss')
-      };
+      const formattedData = {
+        key: key,
+        value: dates[key],
+        description: getDescription(key)
+    };
+
+      let token = localStorage.getItem('accessToken');
   
       try {
-        const response = await fetch(`/api/service/${key}`, {
+        const response = await fetch(`https://dmu-dasom.or.kr/api/service/${key}`, {
           method: 'PATCH',
           headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${token}`,
           },
-          body: JSON.stringify(formattedDate),
+          body: JSON.stringify(formattedData),
         });
   
         if (!response.ok) {
