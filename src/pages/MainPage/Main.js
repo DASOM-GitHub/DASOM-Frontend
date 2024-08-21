@@ -21,10 +21,11 @@ const Main = () => {
   const sliderRef = useRef(null);
 
   const [slides, setSlides] = useState([
-    { imgSrc: 'main_img/2024MT.png', altText: 'MT 사진', caption: 'MT' },
-    { imgSrc: 'main_img/2024HAKATON.png', altText: 'HAKATON 사진', caption: 'HAKATON' },
-    { imgSrc: 'main_img/2024MT.png', altText: 'Slide 3 사진', caption: 'Slide 3' },
-    { imgSrc: 'main_img/2024MT.png', altText: 'Slide 4 사진', caption: 'Slide 4' }
+    { imgSrc: 'main_img/mt.png', altText: 'MT 사진', caption: 'MT' },
+    { imgSrc: 'main_img/hackathon.png', altText: 'HACKATHON 사진', caption: 'HACKATHON' },
+    { imgSrc: 'main_img/makers.png', altText: 'MAKERS 사진', caption: 'MAKERS' },
+    { imgSrc: 'main_img/project.png', altText: 'PROJECT 사진', caption: 'PROJECT' },
+    { imgSrc: 'main_img/study.png', altText: 'STUDY 사진', caption: 'STUDY' },
   ]);
 
   const settings = {
@@ -59,6 +60,10 @@ const Main = () => {
   //     .then(data => setSlides(data))
   //     .catch(error => console.error('Error fetching slides:', error));
   // }, []);
+
+  const handlePartClick = () => {
+    navigate('/about', { state: { scrollTo: 'specialSection' } });
+  };
 
   return (
     <Container>
@@ -139,7 +144,7 @@ const Main = () => {
           <div className='main-4page'>
             <div className='main-4-title'>
               <p>Part</p>
-              <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt=">"/>  
+              <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt=">" onClick={handlePartClick}/>  
             </div>
             <div className='main-4-subtitle'>
               각 분야의 부원들이 한 팀을 이룹니다.
