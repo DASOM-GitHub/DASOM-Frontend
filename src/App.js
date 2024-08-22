@@ -14,6 +14,7 @@ import Admin from './pages/AdminPage/Admin';
 import AdminMain from './pages/AdminPage/AdminMain';
 import AdminRecruitPlan from './pages/AdminPage/AdminRecruitPlan';
 import AdminRecruit from "./pages/AdminPage/AdminRecruit";
+import UserCheck from "./pages/CheckPage/UserCheck";
 import ScrollToTop from "./components/ScrollToTop";
 import PrivateRoute from "./PrivateRoute";
 
@@ -21,7 +22,7 @@ const Layout = () => {
   const location = useLocation();
 
   // 헤더를 보이게 할 페이지 경로들
-  const showHeaderPaths = ["/","/Main", "/main", "/about", "/recruit", "/FAQ"];
+  const showHeaderPaths = ["/","/Main", "/main", "/about", "/recruit", "/FAQ",];
 
   return (
     <div>
@@ -46,6 +47,7 @@ function App() {
               <Route path="/" element={<Main />} />
               <Route path="main" element={<Main />} />
               <Route path="about" element={<About />} />
+              <Route path="usercheck" element={<UserCheck />} />
               <Route path="recruit" element={<Recruit />} />
               <Route path="apply" element={<Apply />} />
               <Route path="applysuccess" element={<ApplySuccess />} />
