@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     width: 50%;
+  
   }
   .apply-title {
     font-size: 32pt;
@@ -73,9 +74,11 @@
   }
   .apply-department-box {
     display: flex;
-    width: AUTO;
+    width: 55%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    text-align: left;
+    font-size: 20px;
 
   }
   .apply-submit {
@@ -96,6 +99,43 @@
       cursor: default;
     }
   }
+
+  /* 약관 동의 섹션 컨테이너 */
+.apply-agreement-box {
+  width: 55%;
+  border-radius: 4px; /* 모서리를 둥글게 */
+  padding: 15px; /* 내부 여백 설정 */
+  margin-bottom: 20px; /* 하단 여백 */
+ 
+}
+
+/* 각 약관 동의 항목 */
+.apply-agreement {
+  display: flex;
+  align-items: center; /* 체크박스와 텍스트를 수직으로 중앙 정렬 */
+  margin-bottom: 10px; /* 항목 간 간격 */
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 표시 */
+}
+
+/* 체크박스 스타일 */
+.apply-agreement input[type="checkbox"] {
+  margin-right: 10px; /* 체크박스와 텍스트 사이 간격 */
+  width: 18px; /* 체크박스 크기 */
+  height: 18px; /* 체크박스 크기 */
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 표시 */
+  accent-color: #444cff; /* 체크된 상태일 때의 색상 */
+}
+
+
+.apply-agreement label {
+  font-size: 14px; 
+  color: #ccc; 
+}
+
+
+.apply-agreement:last-child {
+  margin-bottom: 0; 
+}
 }
 
 @media screen and (max-width: 768px) {
@@ -156,6 +196,7 @@
   .apply-grade {
     opacity: 0.5;
     margin-top: 70px;
+    
   }
   .apply-grade.selected {
     opacity: 1;
@@ -174,10 +215,12 @@
   }
   .apply-department-box {
     display: flex;
-    width: AUTO;
+    width: 55%;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+
   }
+ 
   .apply-submit {
     width: 50%;
     height: 40px;
@@ -195,4 +238,43 @@
       cursor: default;
     }
   }
+
+  /* 약관 동의 섹션 컨테이너 */
+.apply-agreement-box {
+  width: 55%;
+  border-radius: 4px; /* 모서리를 둥글게 */
+  padding: 15px; /* 내부 여백 설정 */
+  margin-bottom: 20px; /* 하단 여백 */
+  font-size: 15px;
+ 
 }
+
+/* 각 약관 동의 항목 */
+.apply-agreement {
+  display: flex;
+  align-items: center; /* 체크박스와 텍스트를 수직으로 중앙 정렬 */
+  margin-bottom: 10px; /* 항목 간 간격 */
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 표시 */
+}
+
+/* 체크박스 스타일 */
+.apply-agreement input[type="checkbox"] {
+  margin-right: 10px; /* 체크박스와 텍스트 사이 간격 */
+  width: 18px; /* 체크박스 크기 */
+  height: 18px; /* 체크박스 크기 */
+  cursor: pointer; /* 마우스를 올렸을 때 포인터 표시 */
+  accent-color: #444cff; /* 체크된 상태일 때의 색상 */
+}
+
+
+.apply-agreement label {
+  font-size: 14px; 
+  color: #ccc; 
+}
+
+
+.apply-agreement:last-child {
+  margin-bottom: 0; 
+}
+}
+

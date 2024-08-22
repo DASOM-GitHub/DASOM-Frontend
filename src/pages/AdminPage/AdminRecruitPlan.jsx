@@ -70,7 +70,7 @@ const AdminRecruitPlan = () => {
   
     return (
       <LocalizationProvider dateAdapter={AdapterDayjs}>
-        <Box
+        <Box  
           sx={{
             width: 'fit-content',
             margin: '20px auto',
