@@ -12,6 +12,8 @@ const AdminRecruitPlan = () => {
         REC_CLOSE: dayjs(),
         REC_MID_ANNOUNCE: dayjs(),
         REC_FINAL_ANNOUNCE: dayjs(),
+        REC_INTERVIEW_START: dayjs(),
+        REC_INTERVIEW_END: dayjs(),
       });
     
     useEffect(() => {
@@ -19,13 +21,13 @@ const AdminRecruitPlan = () => {
         try {
           const token = localStorage.getItem('accessToken');
 
-            const response = await fetch('https://dmu-dasom.or.kr/api/service', {
-                method: 'GET',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${token}`,
-                }
-            });
+          const response = await fetch('https://dmu-dasom.or.kr/api/service', {
+              method: 'GET',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Authorization': `Bearer ${token}`,
+              }
+          });
 
           if (!response.ok) {
             throw new Error('Network response was not ok');
@@ -37,6 +39,8 @@ const AdminRecruitPlan = () => {
             REC_CLOSE: dayjs(data.find(item => item.key === 'REC_CLOSE').value),
             REC_MID_ANNOUNCE: dayjs(data.find(item => item.key === 'REC_MID_ANNOUNCE').value),
             REC_FINAL_ANNOUNCE: dayjs(data.find(item => item.key === 'REC_FINAL_ANNOUNCE').value),
+            REC_INTERVIEW_START: dayjs(data.find(item => item.key === 'REC_INTERVIEW_START').value),
+            REC_INTERVIEW_END: dayjs(data.find(item => item.key === 'REC_INTERVIEW_END').value),
           });
         } catch (error) {
           console.error('Failed to fetch dates:', error);
@@ -63,6 +67,10 @@ const AdminRecruitPlan = () => {
               return '서류 합격 발표';
           case 'REC_FINAL_ANNOUNCE':
               return '최종 합격 발표';
+          case 'REC_INTERVIEW_START':
+              return '면접 시작';
+          case 'REC_INTERVIEW_END':
+              return '면접 종료';
           default:
               return '';
       }
@@ -150,22 +158,22 @@ const AdminRecruitPlan = () => {
             <Box display="flex" alignItems="center" gap={2}>
               <DateTimePicker
                 label="면접 시작"
-                value={dates.REC_MID_ANNOUNCE}
-                onChange={(newValue) => handleDateChange('REC_MID_ANNOUNCE', newValue)}
+                value={dates.REC_INTERVIEW_START}
+                onChange={(newValue) => handleDateChange('REC_INTERVIEW_START', newValue)}
                 renderInput={(params) => <TextField {...params} />}
               />
-              <Button variant="contained" onClick={() => handleSave('REC_MID_ANNOUNCE')}>
+              <Button variant="contained" onClick={() => handleSave('REC_INTERVIEW_START')}>
                 저장
               </Button>
             </Box>
             <Box display="flex" alignItems="center" gap={2}>
               <DateTimePicker
                 label="면접 종료"
-                value={dates.REC_MID_ANNOUNCE}
-                onChange={(newValue) => handleDateChange('REC_MID_ANNOUNCE', newValue)}
+                value={dates.REC_INTERVIEW_END}
+                onChange={(newValue) => handleDateChange('REC_INTERVIEW_END', newValue)}
                 renderInput={(params) => <TextField {...params} />}
               />
-              <Button variant="contained" onClick={() => handleSave('REC_MID_ANNOUNCE')}>
+              <Button variant="contained" onClick={() => handleSave('REC_INTERVIEW_END')}>
                 저장
               </Button>
             </Box>
