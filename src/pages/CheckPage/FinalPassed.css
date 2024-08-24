@@ -1,4 +1,4 @@
-.midpassed {
+.finalpassed {
     background: linear-gradient(90deg, #A1C4FD, #C2E9FB); 
     height: 100vh;
     display: flex;
@@ -6,12 +6,12 @@
     justify-content: center;
 }
 
-.midpassed-box {
+.finalpassed-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 20px 50px;
     background: rgba(255, 255, 255, 0.3); 
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,7 +20,7 @@
     text-align: center;
 }
 
-.midpassed-title {
+.finalpassed-title {
     font-size: 24px;
     font-weight: bold;
     color: #000000; 
@@ -28,7 +28,7 @@
     margin-bottom: 20px;
 }
 
-.midpassed-texts {
+.finalpassed-texts {
     font-size: 16px;
     font-weight: bold;
     color: #000000;
@@ -36,53 +36,35 @@
     margin-bottom: 30px;
 }
 
-.midpassed-texts p {
+.finalpassed-texts p {
     margin: 10px 0;
 }
 
-.midpassed-texts span {
+.finalpassed-texts span {
     font-size: 20px;
     font-weight: bold;
     color: #c70000; 
 }
 
-.midpassed-reservebtn {
-    background-color: #4682b4; 
-    color: white;
-    font-size: 16px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    transition: background-color 0.3s ease;
-}
 
-.midpassed-reservebtn:hover {
-    background-color: #5a9bd4;
-}
-
-.midpassed-reservebtn:active {
-    background-color: #3a76a6;
-}
 
 /* 반응형 디자인 */
 @media (max-width: 600px) {
 
-    .midpassed-title {
+    .finalpassed-box {
+        padding: 15px 30px;
+    }
+
+    .finalpassed-title {
         font-size: 20px;
     }
 
-    .midpassed-texts p span {
+    .finalpassed-texts p span {
         font-size: 18px;
     }
 
-    .midpassed-texts {
+    .finalpassed-texts {
         font-size: 14px;
     }
 
-    .midpassed-reservebtn {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
 }
