@@ -1,0 +1,70 @@
+.midpassed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(90deg, #A1C4FD, #C2E9FB);
+}
+
+.midpassed-title {
+    font-size: 38px;
+    font-weight: bold;
+    margin-top: 90px;
+    margin-bottom: 20px;
+    color: #444CFF;
+}
+
+.midpassed-texts p {
+    font-size: 18px;
+    margin: 5px 0;
+    font-weight: bold;
+    text-align: center;
+}
+.midpassed-texts p span{
+    color: red;
+    font-size: larger;
+}
+
+.midpassed-reservationBox {
+    margin: 50px 0;
+    width: 80%;
+    padding: 30px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    background-color: white;
+}
+
+.midpassed-reservation-info{
+    margin-bottom: 40px;
+}
+.midpassed-reservation-info p span {
+    font-weight: bold;
+    color: red;
+}
+
+.midpassed-login-status{
+    margin-right: 10px; 
+    font-weight: bold; 
+}
+
+.midpassed-input-studentid{
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.midpassed-timeselect-btn{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.midpassed-reservebtn{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+}
