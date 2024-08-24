@@ -27,8 +27,8 @@ const AdminRecruit = () => {
 	const handleDelete = async (studentId) => {
 		try {
 			const response = await axios.delete(`https://dmu-dasom.or.kr/api/recruit/${studentId}`);
-			if (response.status === 201) {
-				setInfo(info.filter((item) => item.studentId !== studentId));
+			if (response.status === 200) {
+				getList();
 			}
 		} catch (error) {
 			console.error('Error Delete : ', error);
@@ -48,8 +48,8 @@ const AdminRecruit = () => {
 					},
 				}
 			);
-			if (response.status === 201) {
-				setInfo(info.map((item) => (item.applyId === applyId ? { ...item, [statusKey]: newStatus } : item)));
+			if (response.status === 200) {
+				getList();
 			}
 		} catch (error) {
 			console.error('Error updating status:', error);
@@ -85,6 +85,7 @@ const AdminRecruit = () => {
 				<thead className="admin-recruit-table-thead">
 					<tr>
 						<th>이름</th>
+						<th>학번</th>
 						{showReason && <th>이메일</th>}
 						<th>연락처</th>
 						<th>학과</th>
@@ -96,8 +97,9 @@ const AdminRecruit = () => {
 				</thead>
 				<tbody>
 					{data.map((item) => (
-						<tr key={item.studentId}>
+						<tr key={item._id}>
 							<td>{item.applicantName}</td>
+							<td>{item.studentId}</td>
 							{showReason && <td>{item.applicantEmail}</td>}
 							<td>{item.applicantContact}</td>
 							{item.applicantDept === 'DEPT_SOFTWARE' ? (
@@ -107,7 +109,7 @@ const AdminRecruit = () => {
 							) : (
 								<td>컴퓨터정보공학과</td>
 							)}
-							<td>{item.applicantGrade}</td>
+							<td>{item.applicantGrade}학년</td>
 							{showReason && <td>{item.reasonForApply}</td>}
 							{showActions && <td>{item[statusKey] ? '합격' : '불합격'}</td>}
 							{showActions && (
