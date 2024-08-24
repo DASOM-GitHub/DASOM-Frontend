@@ -56,50 +56,6 @@ const AdminRecruit = () => {
 		}
 	};
 
-	/*
-	//test용
-	const fetchPosts = async () => {
-		try {
-			const response = await axios.get('http://localhost:3001/applicant', {
-				headers: {
-					Authorization: `Bearer ${token}`,
-				},
-			});
-			setInfo(response.data);
-		} catch (error) {
-			console.log(error);
-		}
-	};
-
-	const handleDelete = async (studentId) => {
-		try {
-			const response = await axios.delete(`http://localhost:3001/applicant?studentId=${studentId}`, {
-				headers: {
-					Authorization: `Bearer ${token}`,
-				},
-			});
-			if (response.status === 201) {
-				setInfo(info.filter((item) => item.studentId !== studentId));
-			}
-		} catch (error) {
-			console.error('Error Delete : ', error);
-		}
-	};
-
-	const handleStatusChange = async (studentId, statusKey, newStatus) => {
-		try {
-			const response = await axios.patch(`http://localhost:3001/applicant?studentId=${studentId}`, {
-				[statusKey]: newStatus,
-			});
-			if (response.status === 201) {
-				setInfo(info.map((item) => (item.studentId === studentId ? { ...item, [statusKey]: newStatus } : item)));
-			}
-		} catch (error) {
-			console.error('Error updating status:', error);
-		}
-	};
-  */
-
 	const exportToExcel = (title) => {
 		let exportData = [];
 
