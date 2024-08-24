@@ -81,7 +81,7 @@ const Apply = () => {
     };
 
     try {
-      const response = await axios.post('https://dmu-dasom.or.kr/recruit', applicationData, {
+      const response = await axios.post('https://dmu-dasom.or.kr/api/recruit', applicationData, {
         headers: {
           'Content-Type': 'application/json',  // Content-Type 헤더 추가
         }
@@ -109,7 +109,7 @@ const Apply = () => {
     }
   
     try {
-      const response = await axios.get('https://dmu-dasom.or.kr/recruit', {
+      const response = await axios.get('https://dmu-dasom.or.kr/api/recruit', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`, 
