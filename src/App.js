@@ -15,6 +15,7 @@ import AdminMain from './pages/AdminPage/AdminMain';
 import AdminRecruitPlan from './pages/AdminPage/AdminRecruitPlan';
 import AdminRecruit from "./pages/AdminPage/AdminRecruit";
 import UserCheck from "./pages/CheckPage/UserCheck";
+import MidPassed from "./pages/CheckPage/MidPassed";
 import ScrollToTop from "./components/ScrollToTop";
 import PrivateRoute from "./PrivateRoute";
 
@@ -51,6 +52,7 @@ function App() {
               <Route path="recruit" element={<Recruit />} />
               <Route path="apply" element={<Apply />} />
               <Route path="applysuccess" element={<ApplySuccess />} />
+              <Route path="midpassed" element={<MidPassed />} />
               <Route path="faq" element={<FAQ />} />
               <Route path="admin" element={<Admin />} />
               <Route path="admin/adminmain" element={

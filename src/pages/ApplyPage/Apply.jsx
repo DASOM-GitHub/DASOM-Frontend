@@ -20,16 +20,16 @@ const Apply = () => {
   const textRef = useRef();
   const navigate = useNavigate();
 
-  const textResize = useCallback(() => {
-    if (textRef.current) {
-      textRef.current.style.height = "230px";
-      textRef.current.style.height = textRef.current.scrollHeight + "px";
-    }
-  }, []);
+	const textResize = useCallback(() => {
+		if (textRef.current) {
+			textRef.current.style.height = '230px';
+			textRef.current.style.height = textRef.current.scrollHeight + 'px';
+		}
+	}, []);
 
-  const handleChange = (setter) => (e) => {
-    setter(e.target.value);
-  };
+	const handleChange = (setter) => (e) => {
+		setter(e.target.value);
+	};
 
   const handleCheckboxChange = (setter) => (e) => {
     setter(e.target.checked);
