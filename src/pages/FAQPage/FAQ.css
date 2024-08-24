@@ -86,13 +86,15 @@ body{
 
 
 
-  body {
+  /* body {
     background: #F5F5F5;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
+
+
 .faq-close-icon, .faq-open-icon {
   width: 1.5vw;
 }

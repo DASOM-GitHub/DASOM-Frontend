@@ -5,9 +5,9 @@ import './AdminRecruit.css';
 
 const AdminRecruit = () => {
 	const [info, setInfo] = useState([]);
-	const token = localStorage.getItem('accessToken');
+	let token = localStorage.getItem('accessToken');
 
-	const fetchPosts = async () => {
+	const getList = async () => {
 		try {
 			const response = await axios.get('https://dmu-dasom.or.kr/api/recruit', {
 				headers: {
@@ -21,12 +21,12 @@ const AdminRecruit = () => {
 	};
 
 	useEffect(() => {
-		fetchPosts();
+		getList();
 	}, []);
 
 	const handleDelete = async (studentId) => {
 		try {
-			const response = await axios.delete(`https://dmu-dasom.or.kr/recruit/${studentId}`);
+			const response = await axios.delete(`https://dmu-dasom.or.kr/api/recruit/${studentId}`);
 			if (response.status === 201) {
 				setInfo(info.filter((item) => item.studentId !== studentId));
 			}
@@ -35,11 +35,21 @@ const AdminRecruit = () => {
 		}
 	};
 
-	const handleStatusChange = async (studentId, status) => {
+	const handleStatusChange = async (applyId, statusKey, newStatus) => {
 		try {
-			const response = await axios.patch(`https://dmu-dasom.or.kr/recruit/${studentId}`, { status });
+			const response = await axios.patch(
+				`https://dmu-dasom.or.kr/api/recruit/${statusKey}/${applyId}`,
+				{
+					isPass: newStatus,
+				},
+				{
+					headers: {
+						Authorization: `Bearer ${token}`,
+					},
+				}
+			);
 			if (response.status === 201) {
-				setInfo(info.map((item) => (item.studentId === studentId ? { ...item, status } : item)));
+				setInfo(info.map((item) => (item.applyId === applyId ? { ...item, [statusKey]: newStatus } : item)));
 			}
 		} catch (error) {
 			console.error('Error updating status:', error);
@@ -146,7 +156,7 @@ const AdminRecruit = () => {
 							{showActions && <td>{item[statusKey] ? '합격' : '불합격'}</td>}
 							{showActions && (
 								<td>
-									{renderStatusButton(item.studentId, statusKey, item[statusKey])}
+									{renderStatusButton(item.applyId, statusKey, item[statusKey])}
 									<button className="admin-recruit-button" onClick={() => handleDelete(item.studentId)}>
 										삭제
 									</button>
