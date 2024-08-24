@@ -143,7 +143,7 @@ const Main = () => {
 
           <div className='main-4page'>
             <div className='main-4-title'>
-              <p>Part</p>
+              <p>PART</p>
               <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt=">" onClick={handlePartClick}/>  
             </div>
             <div className='main-4-subtitle'>
