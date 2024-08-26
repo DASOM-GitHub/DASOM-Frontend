@@ -17,7 +17,7 @@ const Admin = () => {
             e.preventDefault();
             console.log('handleSubmit called');
               try {
-                const response = await axios.post('https://dmu-dasom.or.kr/auth/login', {
+                const response = await axios.post('https://dmu-dasom.or.kr/api/auth/login', {
                       email : email,
                       password : password
                 });
