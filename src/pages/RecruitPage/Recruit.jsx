@@ -6,62 +6,6 @@ import "./Recruit2.css";
 import Footer from "../../components/Footer";
 import axios from "axios";
 
-
-
-/*
-const Recruit = () => {
-  return (
-    <div className="recruit-main">
-      <div className="left-box">
-        <p className="recruit-period">09.02 ~ 09.16</p>
-        <p className="recruit-title">서류 접수</p>
-        <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
-        </p>
-      </div>
-      <div className="right-box">
-        <p className="recruit-period">09.02 ~ 09.16</p>
-        <p className="recruit-title">서류 접수</p>
-        <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
-        </p>
-      </div>
-      <div className="left-box">
-        <p className="recruit-period">09.02 ~ 09.16</p>
-        <p className="recruit-title">서류 접수</p>
-        <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
-        </p>
-      </div>
-      <div className="right-box">
-        <p className="recruit-period">09.02 ~ 09.16</p>
-        <p className="recruit-title">서류 접수</p>
-        <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
-        </p>
-      </div>
-      <div className="left-box">
-        <p className="recruit-period">09.02 ~ 09.16</p>
-        <p className="recruit-title">서류 접수</p>
-        <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
-        </p>
-      </div>
-      <div className="center-button">
-        <Link to="/Apply" className="recruit-button">
-          지원하러가기 →
-        </Link>
-      </div>
-    </div>
-  );
-};
-*/
-
 const Recruit = () => {
   const [recruitData, setRecruitData] = useState({});
 
@@ -69,19 +13,10 @@ const Recruit = () => {
     // API에서 데이터를 가져오기
     const fetchRecruitData = async () => {
       try {
-        // localStorage에서 토큰 가져오기
-        const token = localStorage.getItem('accessToken');
-        
-        // 토큰이 존재하지 않으면 에러 로그를 출력하고 함수 종료
-        if (!token) {
-          console.error('토큰이 존재하지 않습니다. 인증이 필요합니다.');
-          return;
-        }
-
-        const response = await axios.get('https://dmu-dasom.or.kr/api/service', {
+      
+        const response = await axios.get('https://dmu-dasom.or.kr/api/recruit/schedule', {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`, // 토큰 추가
           }
         });
 
@@ -133,7 +68,7 @@ const Recruit = () => {
       </div>
       <div className="right-box">
         <p className="recruit-period">
-          {recruitData["REC_MID_ANNOUNCE"] || "날짜 정보 없음"}
+          {recruitData["REC_INTERVIEW_START"] || "날짜 정보 없음"}
         </p>
         <p className="recruit-title">면접 시작</p>
         <p className="recruit-description">
@@ -143,7 +78,7 @@ const Recruit = () => {
       </div>
       <div className="left-box">
         <p className="recruit-period">
-          {recruitData["REC_MID_ANNOUNCE"] || "날짜 정보 없음"}
+          {recruitData["REC_INTERVIEW_END"] || "날짜 정보 없음"}
         </p>
         <p className="recruit-title">면접 종료</p>
         <p className="recruit-description">
@@ -169,9 +104,5 @@ const Recruit = () => {
     </div>
   );
 };
-
-
-
-
 
 export default Recruit;
