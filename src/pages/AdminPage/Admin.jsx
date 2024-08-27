@@ -11,6 +11,14 @@ const Admin = () => {
         const [password, setPassword] = useState('');
       
         const navigate = useNavigate();
+
+        useEffect(() => {
+          const token = localStorage.getItem("accessToken");
+          
+          if (token) {
+            navigate('adminmain');
+          }
+        }, [navigate]);
       
 
           const handleSubmit = async (e) => {
