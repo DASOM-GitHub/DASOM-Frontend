@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 // import "./Recruit.css";
 import "./Recruit2.css";
-import Footer from "../../components/Footer";
+// import Footer from "../../components/Footer";
 import axios from "axios";
 
 const Recruit = () => {
