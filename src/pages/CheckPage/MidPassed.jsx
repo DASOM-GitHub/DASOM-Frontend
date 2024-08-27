@@ -7,23 +7,14 @@ const MidPassed = () => {
 
     const [url, setUrl] = useState();
     
-    //학번과 전화번호를 건네줬을 경우
+    const location = useLocation();
 
-    // const location = useLocation();
-    
-    // useEffect(() => {
-    //     const { studentId, phoneNumber } = location.state;
-      
-    //     fetch(`https://dmu-dasom.or.kr/api/recruit/result?studentId=${studentId}&phoneNumber=${phoneNumber}`, {
-    //       method: 'GET',
-    //       headers: {
-    //         'Content-Type': 'application/json',
-    //       }
-    //     })
-    //       .then(response => response.json())
-    //       .then(data => setUrl(data.etc))
-    //       .catch(error => console.error('Error:', error));
-    //   }, [location.state]);
+    useEffect(() => {
+        if (location.state && location.state.interviewUrl) {
+            setUrl(location.state.interviewUrl);
+        }
+    }, [location.state]);
+
 
     const handleReserveClick = () => {
         window.open(url, '_blank');  // 새창으로 열기
