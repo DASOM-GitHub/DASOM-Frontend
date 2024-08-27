@@ -7,7 +7,7 @@ const FinalPassed = () => {
     return (
         <div className="finalpassed">
             <div className="finalpassed-box">       
-                <div className='finalpassed-title'>축하드립니다</div>
+                <div className='finalpassed-title'>🎉 축하드립니다 🎉</div>
                 <div className='finalpassed-texts'>
                     <p>DASOM 33.5기 지원에서 <span>최종 합격</span> 하셨습니다.</p>
                     <p>앞으로 DASOM과 함께하며 다양한 활동을 통해</p>

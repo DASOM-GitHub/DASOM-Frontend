@@ -3,7 +3,7 @@ import "./UserCheck.css";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const UserCheck = () => {
+const UserFinalCheck = () => {
     const [studentId, setStudentId] = useState("");
     const [contactLastDigit, setContactLastDigit] = useState("");
     const [error, setError] = useState(null);
@@ -29,7 +29,7 @@ const UserCheck = () => {
             // API 요청 보내기
             const response = await axios.get('https://dmu-dasom.or.kr/api/recruit/result', {
                 params: {
-                    checkType: "FIRST_PASS",  // 확인하고 있는 조회 타입 (예: "FIRST_PASS")
+                    checkType: "SECOND_PASS",  // 확인하고 있는 조회 타입 (예: "FIRST_PASS")
                     studentId: studentId.trim(),  // 학번
                     contactLastDigit: contactLastDigit.trim(),  // 연락처 뒷자리
                 },
@@ -39,7 +39,7 @@ const UserCheck = () => {
             if (response.status === 200 && response.data) {
                 setError(null); // 이전 오류 메시지 초기화
                 if (response.data.isApplicantPassed) {
-                    navigate("/MidPassed");  // 합격 페이지로 이동
+                    navigate("/FinalPassed");  // 합격 페이지로 이동
                 } else {
                     navigate("/Failed");  // 불합격 페이지로 이동
                 }
@@ -68,7 +68,7 @@ const UserCheck = () => {
 
     return (
         <div className="usercheck">
-            <div className="check-title">DAOSM 33.5기 서류 합격자 조회</div>
+            <div className="check-title">DAOSM 33.5기 최종 합격자 조회</div>
             <div className="check-info-box">
                 <div className="check-info">
                     합격자 조회는 지원하신 지원서를 
@@ -97,4 +97,4 @@ const UserCheck = () => {
     );
 };
 
-export default UserCheck;
+export default UserFinalCheck;

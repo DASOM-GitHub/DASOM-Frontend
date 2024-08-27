@@ -15,6 +15,8 @@ import AdminMain from './pages/AdminPage/AdminMain';
 import AdminRecruitPlan from './pages/AdminPage/AdminRecruitPlan';
 import AdminRecruit from "./pages/AdminPage/AdminRecruit";
 import UserCheck from "./pages/CheckPage/UserCheck";
+import UserFinalCheck from "./pages/CheckPage/UserFinalCheck";
+
 import MidPassed from "./pages/CheckPage/MidPassed";
 import FinalPassed from "./pages/CheckPage/FinalPassed";
 import Failed from "./pages/CheckPage/Failed";
@@ -51,6 +53,7 @@ function App() {
               <Route path="main" element={<Main />} />
               <Route path="about" element={<About />} />
               <Route path="usercheck" element={<UserCheck />} />
+              <Route path="userfinalcheck" element={<UserFinalCheck />} />
               <Route path="recruit" element={<Recruit />} />
               <Route path="apply" element={<Apply />} />
               <Route path="applysuccess" element={<ApplySuccess />} />
