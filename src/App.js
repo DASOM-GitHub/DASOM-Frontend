@@ -15,7 +15,11 @@ import AdminMain from './pages/AdminPage/AdminMain';
 import AdminRecruitPlan from './pages/AdminPage/AdminRecruitPlan';
 import AdminRecruit from "./pages/AdminPage/AdminRecruit";
 import UserCheck from "./pages/CheckPage/UserCheck";
+import UserFinalCheck from "./pages/CheckPage/UserFinalCheck";
+
 import MidPassed from "./pages/CheckPage/MidPassed";
+import FinalPassed from "./pages/CheckPage/FinalPassed";
+import Failed from "./pages/CheckPage/Failed";
 import ScrollToTop from "./components/ScrollToTop";
 import PrivateRoute from "./PrivateRoute";
 
@@ -49,10 +53,13 @@ function App() {
               <Route path="main" element={<Main />} />
               <Route path="about" element={<About />} />
               <Route path="usercheck" element={<UserCheck />} />
+              <Route path="userfinalcheck" element={<UserFinalCheck />} />
               <Route path="recruit" element={<Recruit />} />
               <Route path="apply" element={<Apply />} />
               <Route path="applysuccess" element={<ApplySuccess />} />
               <Route path="midpassed" element={<MidPassed />} />
+              <Route path="finalpassed" element={<FinalPassed />} />
+              <Route path="failed" element={<Failed />} />
               <Route path="faq" element={<FAQ />} />
               <Route path="admin" element={<Admin />} />
               <Route path="admin/adminmain" element={
@@ -61,6 +68,25 @@ function App() {
                 </PrivateRoute>
               } 
               />
+
+
+              <Route path="usercheck/midpassed" element={
+                <PrivateRoute>
+                <MidPassed />
+                </PrivateRoute>
+              } 
+              />
+
+
+              <Route path="usercheck/failed" element={
+                              <PrivateRoute>
+                              <Failed />
+                              </PrivateRoute>
+                            } 
+                            />
+
+
+
 
               <Route path="admin/adminmain/admin-recruit-plan" element={
                 <PrivateRoute>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import "./Main.css" ;
 import styled from "styled-components"
 import Slider from "react-slick";
@@ -143,7 +143,7 @@ const Main = () => {
 
           <div className='main-4page'>
             <div className='main-4-title'>
-              <p>Part</p>
+              <p>PART</p>
               <img src={`${process.env.PUBLIC_URL}/main_img/arrow-circle-right.png`} alt=">" onClick={handlePartClick}/>  
             </div>
             <div className='main-4-subtitle'>

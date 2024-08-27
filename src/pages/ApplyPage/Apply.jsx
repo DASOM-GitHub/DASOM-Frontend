@@ -6,7 +6,6 @@ import axios from "axios";
 const Apply = () => {
   const [inputName, setInputName] = useState("");
   const [studentId, setStudentId] = useState("");
-  const [email, setEmail] = useState("");
   const [tel, setTel] = useState("");
   const [motivation, setMotivation] = useState("");
   const [Grade, setGrade] = useState();
@@ -15,7 +14,7 @@ const Apply = () => {
   const [agreeTerms, setAgreeTerms] = useState(false);
   const [agreePrivacy, setAgreePrivacy] = useState(false);
   const [agreeMarketing, setAgreeMarketing] = useState(false);
-  const [applicants, setApplicants] = useState([]);
+  const [applicants] = useState([]);
 
   const textRef = useRef();
   const navigate = useNavigate();
@@ -31,6 +30,34 @@ const Apply = () => {
 		setter(e.target.value);
 	};
 
+   {/* 학번이 0으로는 입력 불가 */}
+  const handleStudentIdChange = (e) => {
+    const value = e.target.value;
+
+    if (value === "") {
+      setStudentId(value);
+      return;
+  }
+
+    if (!/^[1-9]\d*$/.test(value)) {
+      // alert("학번은 0으로 시작할 수 없으며, 숫자만 입력 가능합니다.");
+      return; // 입력을 무시
+    }
+    setStudentId(value);
+  };
+
+  
+   {/* 예) 010-1111-1111로 변환 */}
+  const handleTelChange = (e) => {
+    let value = e.target.value.replace(/[^0-9]/g, ""); // 숫자 이외의 문자 제거
+    if (value.length > 3 && value.length <= 7) {
+      value = value.replace(/(\d{3})(\d+)/, "$1-$2");
+    } else if (value.length > 7) {
+      value = value.replace(/(\d{3})(\d{4})(\d+)/, "$1-$2-$3");
+    }
+    setTel(value);
+  };
+  
   const handleCheckboxChange = (setter) => (e) => {
     setter(e.target.checked);
   };
@@ -140,7 +167,7 @@ const Apply = () => {
     }
 
     try {
-      const response = await axios.get(`https://dmu-dasom.or.kr/recruit/${applyId}`, {
+      const response = await axios.get(`https://dmu-dasom.or.kr/api/recruit/${applyId}`, {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`,
@@ -184,7 +211,6 @@ const Apply = () => {
   const isFormComplete =
     inputName &&
     studentId &&
-    email &&
     tel &&
     motivation &&
     Grade &&
@@ -192,9 +218,11 @@ const Apply = () => {
     agreeTerms &&
     agreePrivacy;
 
+
+
   return (
     <div className="apply-main">
-      <div className="apply-title">지원하기</div>
+      <div className="apply-title"><h2>지원하기</h2></div>
       <form className="apply-ques-box" onSubmit={handleSubmit}>
         <input
           className="apply-input-text"
@@ -207,13 +235,7 @@ const Apply = () => {
           className="apply-input-text"
           placeholder="학번"
           value={studentId}
-          onChange={handleChange(setStudentId)}
-        ></input>
-          <input
-          className="apply-input-text"
-          placeholder="이메일"
-          value={email}
-          onChange={handleChange(setEmail)}  // 이메일 입력 핸들러 추가
+          onChange={handleStudentIdChange}
         ></input>
         <div className="apply-grade-box">
           {["1학년", "2학년", "3학년"].map((grade) => (
@@ -261,7 +283,8 @@ const Apply = () => {
           className="apply-input-text"
           placeholder="연락처"
           value={tel}
-          onChange={handleChange(setTel)}
+          // onChange={handleChange(setTel)}
+          onChange={handleTelChange}
         ></input>
         <textarea
           ref={textRef}
