@@ -1,29 +1,20 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './MidPassed.css';
-
-
 
 
 const MidPassed = () => {
 
     const [url, setUrl] = useState();
     
-    // useEffect( () => {
-    //     const fetchData = async () => {
-    //         try {
-    //           const response = await fetch('https://dmu-dasom.or.kr/api');
-    //           if (!response.ok) {
-    //             throw new Error('Network response was not ok');
-    //           }
-    //           const result = await response.json();
-    //           setUrl(result); 
-    //         } catch (error) {
-    //           console.error('Fetch error:', error);
-    //         }
-    //       };
-      
-    //       fetchData();
-    // }, []);
+    const location = useLocation();
+
+    useEffect(() => {
+        if (location.state && location.state.interviewUrl) {
+            setUrl(location.state.interviewUrl);
+        }
+    }, [location.state]);
+
 
     const handleReserveClick = () => {
         window.open(url, '_blank');  // 새창으로 열기
