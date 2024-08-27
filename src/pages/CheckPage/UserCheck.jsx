@@ -6,7 +6,7 @@ import "./UserCheck.css";
 const UserCheck = () => {
     return (
         <div className="usercheck">            
-            <div className="check-title">합격자 조회</div>
+            <div className="check-title">DAOSM 33.5기 합격자 조회</div>
             <div className="check-info-box">
                 <div className="check-info">
                 합격자 조회는  지원하신 지원서를 
