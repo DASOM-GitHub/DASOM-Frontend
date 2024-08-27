@@ -39,7 +39,11 @@ const UserCheck = () => {
             if (response.status === 200 && response.data) {
                 setError(null); // 이전 오류 메시지 초기화
                 if (response.data.isApplicantPassed) {
-                    navigate("/MidPassed");  // 합격 페이지로 이동
+                    navigate('/MidPassed', { // 합격 페이지로 이동
+                        state: { 
+                            interviewUrl: response.data.etc 
+                        } 
+                    });
                 } else {
                     navigate("/Failed");  // 불합격 페이지로 이동
                 }
