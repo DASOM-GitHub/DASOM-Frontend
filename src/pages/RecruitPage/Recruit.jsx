@@ -72,7 +72,7 @@ const Recruit = () => {
       case "closed":
         return (
           <button className="recruit-button" disabled>
-            지원이 마감되었습니다.
+            현재는 지원기간이 아닙니다.
           </button>
         );
       case "midAnnounce":
