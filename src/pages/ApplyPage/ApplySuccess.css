@@ -18,20 +18,26 @@
 }
 
 .apply-title {
-    font-size: 2vw;
+    font-size: clamp(18px, 2vw, 100px);
     margin-bottom: 10%;
     font-weight: bold;
     text-align: center; /* 타이틀 텍스트 가운데 정렬 */
 }
 
 .apply-content {
-    font-size: 1.5vw;
+    font-size: clamp(12px, 1.5vw, 100px);
     margin-bottom: 10%;
     text-align: center; /* 내용 텍스트 가운데 정렬 */
 }
 
+.apply-content span {
+    font-weight: bold;
+}
+
 .apply-back{
-    font-size: 1.2vw;
+
+    font-size: clamp(10px, 1.2vw, 100px);
     cursor: pointer;
+
 }
 
