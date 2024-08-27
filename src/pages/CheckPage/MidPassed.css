@@ -4,28 +4,35 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f5f5f5
+    /* background-color: #f5f5f5 */
     
     ;
 }
 
-.midpassed-box {
+/* .midpassed-box {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 20px;
     background-color: #f5f5f5;    
-    /* border-radius: 10px; */
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 500px;
     color: #000000; 
     text-align: center;
     border-radius: 25px;
     padding: 50px;
-}
+} */
 
 .midpassed-title {
+    font-size: 24px;
+    color: #000000; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.midpassed-title span {
     font-size: 24px;
     font-weight: bold;
     color: #000000; 
@@ -35,7 +42,7 @@
 
 .midpassed-texts {
     font-size: 16px;
-    font-weight: bold;
+    /* font-weight: bold; */
     color: #000000;
     line-height: 1.6;
     margin-bottom: 30px;
@@ -51,6 +58,11 @@
     color: red; 
 }
 
+.midpassed-text2 span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .midpassed-reservebtn {
     background-color: #444cff; 
     color: white;
@@ -61,6 +73,10 @@
     cursor: pointer;
     margin-bottom: 20px;
     transition: background-color 0.3s ease;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .midpassed-reservebtn:hover {
@@ -71,8 +87,26 @@
     background-color: #3a76a6;
 }
 
+.back-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
 /* 반응형 디자인 */
 @media (max-width: 600px) {
+
+    .midpassed {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #f5f5f5;
+        padding: 20px
+        
+        
+    }
 
     .midpassed-title {
         font-size: 20px;
