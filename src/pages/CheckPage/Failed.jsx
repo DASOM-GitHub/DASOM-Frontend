@@ -1,10 +1,20 @@
-import React from "react";
 import "./FinalPassed.css";
-
-
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 const Failed = () => {
+    const [name, setName] = useState(''); 
+    const location = useLocation();
+
+    useEffect(() => {
+        console.log('location.state:', location.state); 
+        if (location.state && location.state.applicantName) {
+            setName(location.state.applicantName);
+        }
+    }, [location.state]);
+
     return (
+
         <div className="finalpassed">
             <div className="finalpassed-box">       
                 <div className='finalpassed-title'>지원해 주셔서 감사합니다</div>

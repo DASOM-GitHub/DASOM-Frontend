@@ -35,6 +35,9 @@
 }
 
 .apply-back{
+
     font-size: clamp(10px, 1.2vw, 100px);
+    cursor: pointer;
+
 }
 
