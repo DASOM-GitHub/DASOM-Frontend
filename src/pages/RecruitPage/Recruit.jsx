@@ -9,8 +9,10 @@ import axios from "axios";
 const Recruit = () => {
   const [recruitData, setRecruitData] = useState({});
 
+
+
   useEffect(() => {
-    // API에서 데이터를 가져오기
+// API에서 데이터를 가져오기
     const fetchRecruitData = async () => {
       try {
       
@@ -33,6 +35,7 @@ const Recruit = () => {
 
     fetchRecruitData();
   }, []);
+
 
   return (
     <div className="recruit-main">
