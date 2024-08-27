@@ -4,41 +4,65 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const UserCheck = () => {
-    const [studentId, setStudentId] = useState();
-    const [contactLastDigit, setContactLastDigit] = useState();
+    const [studentId, setStudentId] = useState("");
+    const [contactLastDigit, setContactLastDigit] = useState("");
     const [error, setError] = useState(null);
     const navigate = useNavigate();
-    const checkType = "FIRST_PASS";
-    
+
+    const handleChange = (setter) => (event) => {
+        setter(event.target.value);
+    };
+
     const handleCheck = async () => {
+        // 유효성 검사
+        if (studentId.length !== 8 || !/^\d+$/.test(studentId)) {
+            setError("학번은 8자리 숫자로 입력해주세요.");
+            return;
+        }
+        
+        if (contactLastDigit.length !== 4 || !/^\d+$/.test(contactLastDigit)) {
+            setError("연락처 뒷 번호는 4자리 숫자로 입력해주세요.");
+            return;
+        }
+
         try {
-            // 데이터 유효성 검증
-            if (studentId.length < 8 || studentId.startsWith("0")) {
-                throw new Error("학번은 8자리 이상이어야 하며, 0으로 시작할 수 없습니다.");
-            }
-
-            if (contactLastDigit.length !== 4) {
-                throw new Error("연락처 뒷 번호는 4자리여야 합니다.");
-            }
-
-            
-            // GET 요청 보내기
-            const response = await axios.get(`https://dmu-dasom.or.kr/api/recruit/result`, {
-                checkType :checkType, // "FIRST_PASS" 또는 "SECOND_PASS" 중 하나 선택
-                studentId: String(studentId), // studentId를 문자열로 변환
-                contactLastDigit: String(contactLastDigit), 
-                
+            // API 요청 보내기
+            const response = await axios.get('https://dmu-dasom.or.kr/api/recruit/result', {
+                params: {
+                    checkType: "FIRST_PASS",  // 확인하고 있는 조회 타입 (예: "FIRST_PASS")
+                    studentId: studentId.trim(),  // 학번
+                    contactLastDigit: contactLastDigit.trim(),  // 연락처 뒷자리
+                },
             });
-            
-            if (response.status === 200) {
-                console.log('성공', response.data);
-                navigate("/MidPassed"); // 페이지 이동
-            } else {
-                throw new Error(`조회에 실패했습니다. 상태 코드: ${response.status}`);
+
+            // 응답 데이터에서 합격 여부 확인
+            if (response.status === 200 && response.data) {
+                setError(null); // 이전 오류 메시지 초기화
+                if (response.data.isApplicantPassed) {
+                    navigate("/MidPassed");  // 합격 페이지로 이동
+                } else {
+                    navigate("/Failed");  // 불합격 페이지로 이동
+                }
             }
         } catch (error) {
-            console.error("에러 발생:", error.message);
-            setError(error.message);
+            if (error.response) {
+                if (error.response.status === 400) {
+                    const errorCode = error.response.data.message;
+                    if (errorCode === "100") {
+                        setError("현재는 합격 조회 기간이 아닙니다.");
+                    } else if (errorCode === "101") {
+                        setError("정보가 일치하지 않습니다. 학번과 연락처 뒷자리를 다시 확인해주세요.");
+                    } else {
+                        setError("잘못된 요청입니다. 다시 시도해주세요.");
+                    }
+                } else if (error.response.status === 404) {
+                    setError("해당하는 지원자가 없습니다.");
+                } else {
+                    setError("서버와의 통신 중 오류가 발생했습니다.");
+                }
+            } else {
+                setError("서버와의 통신 중 오류가 발생했습니다.");
+            }
         }
     };
 
@@ -55,16 +79,14 @@ const UserCheck = () => {
             <input
                 className="check-input-text"
                 placeholder="학번"
-                type="text"
                 value={studentId}
-                onChange={(e) => setStudentId(e.target.value)}
+                onChange={handleChange(setStudentId)}
             />
             <input
                 className="check-input-text"
                 placeholder="연락처 뒷 번호"
-                type="text"
                 value={contactLastDigit}
-                onChange={(e) => setContactLastDigit(e.target.value)}
+                onChange={handleChange(setContactLastDigit)}
             />
             <button className="check-button" onClick={handleCheck}>
                 조회하기

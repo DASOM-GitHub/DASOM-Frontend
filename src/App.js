@@ -66,6 +66,25 @@ function App() {
               } 
               />
 
+
+              <Route path="usercheck/midpassed" element={
+                <PrivateRoute>
+                <MidPassed />
+                </PrivateRoute>
+              } 
+              />
+
+
+              <Route path="usercheck/failed" element={
+                              <PrivateRoute>
+                              <Failed />
+                              </PrivateRoute>
+                            } 
+                            />
+
+
+
+
               <Route path="admin/adminmain/admin-recruit-plan" element={
                 <PrivateRoute>
                 <AdminRecruitPlan />
