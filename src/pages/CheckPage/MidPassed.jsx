@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import './MidPassed.css';
-
-
 
 
 const MidPassed = () => {
 
     const [url, setUrl] = useState();
     
-    // useEffect( () => {
-    //     const fetchData = async () => {
-    //         try {
-    //           const response = await fetch('https://dmu-dasom.or.kr/api');
-    //           if (!response.ok) {
-    //             throw new Error('Network response was not ok');
-    //           }
-    //           const result = await response.json();
-    //           setUrl(result); 
-    //         } catch (error) {
-    //           console.error('Fetch error:', error);
-    //         }
-    //       };
+    //학번과 전화번호를 건네줬을 경우
+
+    // const location = useLocation();
+    
+    // useEffect(() => {
+    //     const { studentId, phoneNumber } = location.state;
       
-    //       fetchData();
-    // }, []);
+    //     fetch(`https://dmu-dasom.or.kr/api/recruit/result?studentId=${studentId}&phoneNumber=${phoneNumber}`, {
+    //       method: 'GET',
+    //       headers: {
+    //         'Content-Type': 'application/json',
+    //       }
+    //     })
+    //       .then(response => response.json())
+    //       .then(data => setUrl(data.etc))
+    //       .catch(error => console.error('Error:', error));
+    //   }, [location.state]);
 
     const handleReserveClick = () => {
         window.open(url, '_blank');  // 새창으로 열기
