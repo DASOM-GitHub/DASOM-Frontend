@@ -41,6 +41,7 @@ const UserCheck = () => {
                 if (response.data.isApplicantPassed) {
                     navigate('/MidPassed', { // 합격 페이지로 이동
                         state: { 
+                            applicantName: response.data.applicantName,
                             interviewUrl: response.data.etc 
                         } 
                     });
