@@ -46,7 +46,12 @@ const UserCheck = () => {
                         } 
                     });
                 } else {
-                    navigate("/Failed");  // 불합격 페이지로 이동
+                    navigate("/Failed", {
+                        state: { 
+                            applicantName: response.data.applicantName,
+                        } 
+                    });  // 불합격 페이지로 이동
+                    
                 }
             }
         } catch (error) {

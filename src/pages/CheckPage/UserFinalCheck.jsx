@@ -39,9 +39,18 @@ const UserFinalCheck = () => {
             if (response.status === 200 && response.data) {
                 setError(null); // 이전 오류 메시지 초기화
                 if (response.data.isApplicantPassed) {
-                    navigate("/FinalPassed");  // 합격 페이지로 이동
+                    navigate("/FinalPassed" ,{
+                        state: { 
+                            applicantName: response.data.applicantName,
+                        } 
+                    });  // 합격 페이지로 이동
+                    
                 } else {
-                    navigate("/Failed");  // 불합격 페이지로 이동
+                    navigate("/Failed", {
+                        state: { 
+                            applicantName: response.data.applicantName,
+                        } 
+                    });  // 불합격 페이지로 이동
                 }
             }
         } catch (error) {

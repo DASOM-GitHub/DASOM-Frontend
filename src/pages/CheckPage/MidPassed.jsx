@@ -32,9 +32,9 @@ const MidPassed = () => {
     return (
         <div className='midpassed'>
             <div className='midpassed-box'>
-                <div className='midpassed-title'>🎉 <span>{name}님</span>, 축하드립니다 🎉</div>
+                <div className='midpassed-title'>🎉 <span>{name}</span>님, 축하드립니다 🎉</div>
                 <div className='midpassed-texts'>
-                    <p>DASOM 33.5기 지원에서 <span>1차 합격</span> 하셨습니다.</p>
+                    <p>서류 검토 결과, DASOM 33.5기에 <span>서류 합격</span> 하셨습니다.</p>
                     <p>함께하게 될 미래를 기대하며
                     면접을 통해 여러분의 이야기를 더 가까이에서 듣고자 합니다.</p>
                     <br/>
@@ -45,8 +45,9 @@ const MidPassed = () => {
                     <br/>
                     </div>
                     <div className='midpassed-text2'>
-                    <p><span>{name}님</span>과 만날 날을 고대하고 있겠습니다.</p>
-                    <p>이후 궁금하신 점은 <span>회장 남호성: 010-6225-6023</span> 을 통해 연락부탁드립니다.</p>
+                    <p><span>면접은 3호관 5층 DASOM 동아리방에서 진행됩니다.</span></p>
+                    <p><span>{name}</span>님과 만날 날을 고대하고 있겠습니다.</p>
+                    <p>이후 궁금하신 점은 <span>회장 남호성: 010-6225-6023</span> 을 통해 문의 부탁드립니다.</p>
                     <p>감사합니다. 🙂</p>
                     </div>
                     
