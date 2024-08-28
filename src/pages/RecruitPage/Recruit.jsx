@@ -8,22 +8,19 @@ const Recruit = () => {
   const [recruitData, setRecruitData] = useState({});
   const [currentStage, setCurrentStage] = useState("");
 
+  // 초 단위 제거 함수
+  const removeSeconds = (dateTimeString) => {
+    if (!dateTimeString) return "날짜 정보 없음";
+    return dateTimeString.slice(0, -3);
+  };
+
   useEffect(() => {
     // API에서 데이터를 가져오기
     const fetchRecruitData = async () => {
       try {
-        // localStorage에서 토큰 가져오기
-        const token = localStorage.getItem('accessToken');
-        
-        if (!token) {
-          console.error('토큰이 존재하지 않습니다. 인증이 필요합니다.');
-          return;
-        }
-
-        const response = await axios.get('https://dmu-dasom.or.kr/api/service', {
+        const response = await axios.get('https://dmu-dasom.or.kr/api/recruit/schedule', {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`, // 토큰 추가
           }
         });
 
@@ -96,7 +93,7 @@ const Recruit = () => {
     <div className="recruit-main">
       <div className="left-box">
         <p className="recruit-period">
-          {recruitData["REC_OPEN"] || "날짜 정보 없음"}
+          {removeSeconds(recruitData["REC_OPEN"])}
         </p>
         <p className="recruit-title">모집 시작</p>
         <p className="recruit-description">
@@ -106,7 +103,7 @@ const Recruit = () => {
       </div>
       <div className="right-box">
         <p className="recruit-period">
-          {recruitData["REC_CLOSE"] || "날짜 정보 없음"}
+          {removeSeconds(recruitData["REC_CLOSE"])}
         </p>
         <p className="recruit-title">지원 종료</p>
         <p className="recruit-description">
@@ -116,7 +113,7 @@ const Recruit = () => {
       </div>
       <div className="left-box">
         <p className="recruit-period">
-          {recruitData["REC_MID_ANNOUNCE"] || "날짜 정보 없음"}
+          {removeSeconds(recruitData["REC_MID_ANNOUNCE"])}
         </p>
         <p className="recruit-title">서류 합격 발표</p>
         <p className="recruit-description">
@@ -126,7 +123,7 @@ const Recruit = () => {
       </div>
       <div className="right-box">
         <p className="recruit-period">
-          {recruitData["REC_MID_ANNOUNCE"] || "날짜 정보 없음"}
+          {removeSeconds(recruitData["REC_INTERVIEW_START"])}
         </p>
         <p className="recruit-title">면접 시작</p>
         <p className="recruit-description">
@@ -136,7 +133,7 @@ const Recruit = () => {
       </div>
       <div className="left-box">
         <p className="recruit-period">
-          {recruitData["REC_MID_ANNOUNCE"] || "날짜 정보 없음"}
+          {removeSeconds(recruitData["REC_INTERVIEW_END"])}
         </p>
         <p className="recruit-title">면접 종료</p>
         <p className="recruit-description">
@@ -146,7 +143,7 @@ const Recruit = () => {
       </div>
       <div className="right-box">
         <p className="recruit-period">
-          {recruitData["REC_FINAL_ANNOUNCE"] || "날짜 정보 없음"}
+          {removeSeconds(recruitData["REC_FINAL_ANNOUNCE"])}
         </p>
         <p className="recruit-title">최종 합격 발표</p>
         <p className="recruit-description">

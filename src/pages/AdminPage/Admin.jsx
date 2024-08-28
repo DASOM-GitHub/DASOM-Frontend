@@ -11,6 +11,14 @@ const Admin = () => {
         const [password, setPassword] = useState('');
       
         const navigate = useNavigate();
+
+        useEffect(() => {
+          const token = localStorage.getItem("accessToken");
+          
+          if (token) {
+            navigate('adminmain');
+          }
+        }, [navigate]);
       
 
           const handleSubmit = async (e) => {
@@ -42,7 +50,7 @@ const Admin = () => {
   return (
    <div className='admin'>
     <div className='admin-login-form'>
-        <div className='admin-login-title'>관리자 페이지 입니다.</div>
+        <div className='admin-login-title'>너 관리자 인지 확인하도록 하겠음</div>
         <div className='admin-login-id'>
         <input
         type='email'
