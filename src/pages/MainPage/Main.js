@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import "./Main.css" ;
 import styled from "styled-components"
 import Slider from "react-slick";
@@ -28,6 +28,23 @@ const Main = () => {
     { imgSrc: 'main_img/study.png', altText: 'STUDY 사진', caption: 'STUDY' },
   ]);
 
+
+  const [midAnnounceDate, setMidAnnounceDate] = useState();
+  const [finalAnnounceDate, setFinalAnnounceDate] = useState();
+
+  useEffect(() => {
+    fetch('https://dmu-dasom.or.kr/api/recruit/schedule')
+      .then(response => response.json())
+      .then(data => {
+        const midAnnounce = new Date(data.find(item => item.key === "REC_MID_ANNOUNCE").value);
+        const finalAnnounce = new Date(data.find(item => item.key === "REC_FINAL_ANNOUNCE").value);
+        setMidAnnounceDate(midAnnounce);
+        setFinalAnnounceDate(finalAnnounce);
+      })
+      .catch(error => console.error('합격 발표 날짜 가져오기 에러:', error));
+  }, []);
+
+
   const settings = {
     dots: true,
     infinite: true,
@@ -50,20 +67,29 @@ const Main = () => {
   const handleAboutNavigation = () => {
     navigate('/about');
   };
-  const handleApplyNavigation = () => {
-    navigate('/recruit');
-  };
-
-  // useEffect(() => {
-  //   fetch('/api/slides')
-  //     .then(response => response.json())
-  //     .then(data => setSlides(data))
-  //     .catch(error => console.error('Error fetching slides:', error));
-  // }, []);
 
   const handlePartClick = () => {
     navigate('/about', { state: { scrollTo: 'specialSection' } });
   };
+
+  const handleApplyNavigation = () => {
+    navigate('/recruit');
+  }
+
+
+  const currentDate = new Date();
+
+  let buttonText = "지원하러 가기";
+  let buttonAction = () => navigate('/recruit');
+
+  if (currentDate >= finalAnnounceDate && currentDate <= new Date(finalAnnounceDate.getTime() + 7 * 24 * 60 * 60 * 1000)) {
+    buttonText = "최종 합격자 조회하기";
+    buttonAction = () => navigate('/userfinalcheck');
+  } else if (currentDate >= midAnnounceDate && currentDate <= finalAnnounceDate) {
+    buttonText = "1차 합격자 조회하기";
+    buttonAction = () => navigate('/usercheck');
+  }
+
 
   return (
     <Container>
@@ -78,8 +104,8 @@ const Main = () => {
                 <p>컴퓨터소프트웨어학과</p>
                 <p>전공동아리 DASOM</p>
               </div>
-              <div className='main-subtitle' onClick={handleApplyNavigation}>
-                33.5기 지원하기
+              <div className='main-subtitle' onClick={buttonAction}>
+                {buttonText}
                 <img className='main-applybtn' src={`${process.env.PUBLIC_URL}/main_img/arrow.png`} alt=">"/>
               </div>
             </div>

@@ -29,20 +29,15 @@
     font-size: clamp(20px, 3.5vw, 56px);
     font-weight: bold;
     color: white;
-    margin-top: 1em;
 }
 .main-1pageImg{
     width: 30vw;
     height: 30vw;
-    border-radius: 50%;
     background-color: none;
-    border: solid 3px #444CFF;
 }
 .main-1pageImg img {
-    width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: solid 3px #444CFF;
+    width: auto;
+    height: 100%;
 }
 .main-title p {
     margin: 0;
