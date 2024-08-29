@@ -63,13 +63,11 @@
 }
 .main-2-contents {
     align-items: center;
-    margin: 0 10% 0 10%;
-    width: 80%;
+    justify-content: center;
     display: flex;
 }
 .main-2-title{
-    margin-left: 10%;
-    text-align: left;
+    text-align: center;
     font-size: clamp(20px, 4vw, 56px);
     font-weight: bold;
     margin-bottom: 2em;
@@ -78,8 +76,6 @@
     display: flex;
     flex-direction: column;
     gap: 3em;
-    flex: 1;
-    margin-right: 2%;
 }
 .main-1box-title {
     font-size: clamp(12px, 2vw, 48px);
@@ -93,6 +89,7 @@
     font-size: clamp(8px, 1.2vw, 36px);
     padding: 1em 4em 0.5em 2em;
     border-radius: 1.5em;
+    margin-right: 8em;
 }
 .main-2-2box {
     margin-left: 20%;
@@ -113,13 +110,6 @@
     padding: 1em 4em 0.5em 2em;
     border-radius: 1.5em;
 }
-.main-2pageImg {
-    width: 30vw;
-    height: 30vw;
-    background-color: #F5F5F5;
-    border-radius: 50%;
-}
-
 .main-2pageImg{
     width: 30vw;
     height: 30vw;
@@ -187,6 +177,9 @@
     gap: 1.5em;
     font-size: clamp(10px, 2vw, 48px);
     color: white;
+    justify-content: left;
+    align-items: center;
+    text-align: center;
 }
 .main-4-boxes1{
     margin-bottom: 1.5em;
