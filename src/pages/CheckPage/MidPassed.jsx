@@ -45,7 +45,7 @@ const MidPassed = () => {
                     <br/>
                     </div>
                     <div className='midpassed-text2'>
-                    <p><span>면접은 3호관 5층 DASOM 동아리방에서 진행됩니다.</span></p>
+                    <p><span>면접은 3호관 5층 DASOM 동아리방 511호에서 진행됩니다.</span></p>
                     <p><span>{name}</span>님과 만날 날을 고대하고 있겠습니다.</p>
                     <p>이후 궁금하신 점은 <span>회장 남호성: 010-6225-6023</span> 을 통해 문의 부탁드립니다.</p>
                     <p>감사합니다. 🙂</p>
