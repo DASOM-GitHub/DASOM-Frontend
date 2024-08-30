@@ -97,8 +97,8 @@ const Recruit = () => {
         </p>
         <p className="recruit-title">모집 시작</p>
         <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
+        새로운 도전과 기회를 만나보세요. 다양한 활동을 통해 
+          <br /> 자신의 역량을 발전시키고 특별한 경험을 쌓을 수 있습니다.
         </p>
       </div>
       <div className="right-box">
@@ -107,8 +107,8 @@ const Recruit = () => {
         </p>
         <p className="recruit-title">지원 종료</p>
         <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
+         다음 기회를 놓치지 않도록 계속해서 저희와 함께하세요. 
+          <br />  지원해주신 모든 분들께 감사드립니다.
         </p>
       </div>
       <div className="left-box">
@@ -117,8 +117,8 @@ const Recruit = () => {
         </p>
         <p className="recruit-title">서류 합격 발표</p>
         <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
+        서류 합격 결과를 확인하여 
+          <br /> 면접을 위한 준비를 해주시기 바랍니다.
         </p>
       </div>
       <div className="right-box">
@@ -127,8 +127,8 @@ const Recruit = () => {
         </p>
         <p className="recruit-title">면접 시작</p>
         <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
+        자신감을 가지고 면접에 임해주시기 바라며  
+          <br /> 성공적인 면접이 되길 응원합니다!
         </p>
       </div>
       <div className="left-box">
@@ -137,8 +137,8 @@ const Recruit = () => {
         </p>
         <p className="recruit-title">면접 종료</p>
         <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
+        면접이 종료되었습니다. 모든 지원자분들의 노력에 
+          <br /> 감사드리며, 좋은 소식을 전해드릴 수 있기를 기대합니다.
         </p>
       </div>
       <div className="right-box">
@@ -147,8 +147,8 @@ const Recruit = () => {
         </p>
         <p className="recruit-title">최종 합격 발표</p>
         <p className="recruit-description">
-          다채로운 경험을 통해 보다 새롭고
-          <br /> 심도있게 탐구합니다.
+        최종 합격을 진심으로 축하드립니다! 앞으로 다양한 경험을 
+          <br /> 통해 깊이 있는 성장을 이루시기를 바랍니다.
         </p>
       </div>
       <div className="center-button">

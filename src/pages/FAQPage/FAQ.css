@@ -187,6 +187,7 @@ body{
       width: 20vw;
       font-size: 0.8vw; 
       height: 7vh;
+      font-size: 0.9vw;
     }
 
     .center-button {
@@ -295,7 +296,7 @@ body{
 
     .faq-answer {
         width: 25vw;
-        font-size: 1vw; 
+        font-size: 1.1vw; 
         padding: 1.5vw 1.5vh ;
         border: 0.1vw solid #fafafa; 
     }
@@ -306,13 +307,13 @@ body{
       /* height: 10vh; 100px을 viewport height의 10%로 변환 */
     }
     
-    .recruit-button {
+    .faq-recruit-button {
       margin-top: 20%;
-      width: 16.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
+      width: 20.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
       height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
       border-radius: 25px;
       border: none;
-      font-size: 1.2vw;
+      font-size: 1.4vw;
       display: flex;
       justify-content: center;
       color: #ffffff;
@@ -360,20 +361,20 @@ body{
         border: 0.1vw solid #fafafa; 
     }
 
-    .center-button {
+    .faq-center-button {
       display: flex;
       justify-content: center;
       align-items: center;
       /* height: 10vh; 100px을 viewport height의 10%로 변환 */
   }
   
-  .recruit-button {
+  .faq-recruit-button {
       margin-top: 20%;
-      width: 16.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
-      height: 4.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
+      width: 30.1875vw; /* 234px / 1920px * 100 = 12.1875vw */
+      height: 6.1667vw; /* 80px / 1920px * 100 = 4.1667vw */
       border-radius: 25px;
       border: none;
-      font-size: 1.2vw;
+      font-size: 2.2vw;
       display: flex;
       justify-content: center;
       color: #ffffff;
@@ -390,6 +391,8 @@ body{
       width: 3.5vw;
   }
 }
+
+
 
 
 

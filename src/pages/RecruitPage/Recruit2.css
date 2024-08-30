@@ -1,5 +1,6 @@
 .left-box{
-    margin-left: 21.7%;
+    /* margin-left: 21.7%; */
+    margin-left: 16%;
     margin-right: 49%;
     margin-top: 15.77%;
 
@@ -24,10 +25,12 @@
 }
 
 .right-box{
-    margin-left: 60.09375%;
+    /* margin-left: 60.09375%; */
+    margin-left: 55%;
     margin-right: 12.6%;
     margin-top: 12.77%;
     width: 30%;
+    text-align: right;
 }
 
 .center-button {
@@ -62,4 +65,80 @@
     background-color: #f5f5f5;
     border-color: #f5f5f5;
     color: grey;
+}
+
+
+@media screen and (max-width: 767px) {
+    .left-box{
+        /* margin-left: 21.7%; */
+        margin-left: 16%;
+        margin-right: 49%;
+        margin-top: 15.77%;
+        width: 70%;
+        /* background-color: blue; */
+    
+    }
+    
+    .recruit-period{
+        color: #444CFF;
+        font-weight: bold;
+        font-size: 3.67vw
+    }
+    
+    .recruit-title{
+        font-size: 5.33vw;
+        font-weight: bold;
+        margin-top: 5.77%;
+    
+    }
+    
+    .recruit-description{
+        font-size: 3.0vw;
+        margin-top: 5.77%;
+        width: 100%;
+        /* background-color: red; */
+    }
+    
+    .right-box{
+        margin-left: 20.09375%;
+        /* margin-left: 55%; */
+        margin-right: 12.6%;
+        margin-top: 15.77%;
+        width: 70%;
+        text-align: right;
+    }
+    
+    .center-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* height: 10vh;  */
+        margin-bottom: 30%;
+    
+    
+    }
+    
+    .recruit-button {
+        margin-top: 15%;
+        width: 27.1875vw; 
+        height: 6.1667vw; 
+        border-radius: 25px;
+        border: none;
+        font-size: 2.5vw;
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        align-items: center;
+        border: 1px solid #444cff;
+        background-color: #444cff;
+        text-decoration: none;
+        /* margin-bottom: 50%; */
+    
+    }
+    
+    .recruit-button:disabled{
+        background-color: #f5f5f5;
+        border-color: #f5f5f5;
+        color: grey;
+    }
 }
