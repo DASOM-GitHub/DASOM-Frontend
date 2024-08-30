@@ -27,7 +27,7 @@ const FinalPassed = () => {
     return (
         <div className="midpassed">
             <div className="midpassed-box">       
-                <div className='midpassed-title'>🎉 <span>{name}님,</span> 축하드립니다 🎉</div>
+                <div className='midpassed-title'>🎉 <span>{name}</span>님, 축하드립니다 🎉</div>
                 <div className='midpassed-texts'>
                     <p>DASOM 33.5기 지원에서 <span>최종 합격</span> 하셨습니다.</p>
                     <br/>
