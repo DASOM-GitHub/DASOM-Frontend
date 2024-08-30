@@ -60,7 +60,16 @@ const Main = () => {
     customPaging: i => (
       <div className="main-slick-dot">
       </div>
-    )
+    ),
+    responsive: [
+      {
+        breakpoint: 768, // 모바일
+        settings: {
+          slidesToShow: 2,
+          centerMode: false,
+        }
+      }
+    ]
   };
 
   const navigate = useNavigate(); 

@@ -85,3 +85,35 @@
     font-size: 12px;
 }
 
+@media (max-width: 768px) {
+    .usercheck{
+        width: 90%; 
+    }
+
+    .check-title {
+        font-size: 6vw;
+    }
+
+    .check-info-box {
+        width: 90%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    .check-info {
+        padding: 1.5em 2em; 
+    }
+
+    .check-input-text {
+        width: 80%;
+        margin-top: 30px;
+        padding: 5px 10px; 
+    }
+
+    .check-button {
+        width: 80%;
+        margin-top: 30px; 
+        padding: 5px 10px;
+    }
+}
+
